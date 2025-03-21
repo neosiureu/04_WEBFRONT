@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>08_하이퍼링크관련태그</title>
+</head>
+
+<body>
+  <br><br>
+  <hr>
+
+  <h1>하이퍼링크 관련 태그: anchor</h1>
+
+  <pre>
+    a태그를 통해 <br>
+    현재 html문서와 다른 html문서를 연결하여 페이지의 이동<br>
+    이 때 a태그로 감싸진 문자열을 하이퍼링크라고 부른다.<br>
+    서버에는 웹 페이지간 이동은 필수적<br>
+    하이퍼 텍스트를 다루기 위해 html이 존재하는 것 <br>
+  </pre>
+
+
+  <br><br>
+  <hr>
+
+  <h2>a태그를 이용한 하이퍼링크의 구현</h2>
+
+  <br><br>
+  <hr>
+
+  <ul>
+    <li>
+      <a href="01_글자관련태그.html">01_하이퍼_글자관련 태그</a>
+    </li>
+    <br>
+
+
+    <li>
+      <a href="02_목록관련태그.html" target="_blank">02_목록관련태그</a>
+    </li>
+
+
+    <li>
+      <a href="https://www.naver.com">
+        <h2>이 글을 클릭하면 네이버로 이동</h2>
+      </a>
+    </li>
+
+    <li>
+      <a href="https://www.naver.com">
+        <h2>이미지 출력 시 페이지 이동</h2>
+        <img src="/images/flowers/flower1.jpg" width="120px">
+      </a>
+    </li>
+
+
+
+  </ul>
+
+  <h2>한 페이지 내에서 왔다갔다하며 #을이용해 특정 위치로 이동한다</h2>
+  
+  <ul id="list">목록
+
+    <li>
+      <a href="#cat1">고양이1</a>
+    </li>
+    <li>
+      <a href="#cat2">고양이2</a>
+    <li>
+      <a href="#cat3">고양이3</a>
+
+  </ul>
+
+  <h3 id="cat1">고양이1</h3>
+  <img src="/images/cats/cat1.jpg" alt="" width="300px">
+
+  <h3 id="cat2">고양이2</h3>
+  <img src="/images/cats/cat2.jpg" alt="" width="400px">
+
+  <h3 id="cat3">고양이3</h3>
+  <img src="/images/cats/cat3.jpg" alt=""  width="400px">
+  <!--      
+ target 속성: 연결된 문서를 어디에서 열 것인지 지정하는 속성
+ 기본 값 = 같은 탭 => _blank이면 새 탭 
+  -->
+  <br><br>
+  <hr>
+
+  <a href="#list">다시 고양이 목록이 있는 위로 올라간다</a>
+
+
+  <br><br>
+  <hr>
+
+
+  <br><br>
+  <hr>
+
+
+  <br><br>
+  <hr>
+
+
+  <br><br>
+  <hr>
+
+
+  <br><br>
+  <hr>
+
+
+  <br><br>
+  <hr>
+
+
+  <br><br>
+  <hr>
+
+
+</body>
+
+</html>
