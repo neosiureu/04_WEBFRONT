@@ -1,0 +1,43 @@
+/*
+전체 파일이 <style></style>의 내부로 여기면 됨
+*/
+
+/*기본 속성 선택자*/
+div[name="name-1"]{
+  background-color: tomato;
+} 
+
+
+
+p[name="name-1"]{
+  background-color: green;
+}
+
+/*자식 선택자*/
+#parent-ul > li{
+  background-color: orange;
+}
+
+
+
+#parent-ul > li >span{
+  background-color: magenta;
+}
+
+
+
+/*후손 선택자*/
+
+#test-div p{ /*>가 아닌 그냥 띄어쓰기*/
+
+  background-color: yellowgreen;
+
+}
+
+
+
+
+
+div[test="leejuwon"]{
+  background-color: blanchedalmond;
+} 

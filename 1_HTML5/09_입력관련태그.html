@@ -198,7 +198,7 @@ input태그에 들어갈 디폴트 값을 지정해준다
   <br><br>
   <hr>
 
-  기타 인풋 태그 
+  기타 인풋 태그
   type="color": <input type="color"> <br>
 
 
@@ -212,10 +212,233 @@ input태그에 들어갈 디폴트 값을 지정해준다
 
   type="hidden": <input type="hidden" value="홍길동">
 
+
   <pre>
     홍길동이라는 값들은 화면에 보이지는 않아도 실제 서버에는 제출된다.
+  </pre>
+
+
+
+
+
+  <br><br>
+  <hr>
+  폼태그: div와 비슷하게 블록의 형식이지만 <br>
+  내부에 input태그가 있는데 그것에 해당하는 값이 서버로 전달 됨
+
+
+  <pre>
+    - div와 같은 영역(block 형식)
+    - 내부에 작성된 input 태그의 값을 서버로 전달하는 역할
+
+
+    [속성]
+        1) action : 내부에 작성된 값을 전달할 서버 또는 페이지 주소를 작성
+        (미작성 시 기본값으로 현재 페이지의 URL 적용)
+        
+        
+        2) name : form 태그의 이름을 지정하여 form 태그 구분(JS 사용)
+
+
+        3) method(방식) : 서버로 데이터 전달하는 방식을 지정하는 속성
+        - GET (page request) / POST (page commit) 등의 방식을 지정 가능(기본값 GET) 
+
+        4) target : action에 지정된 주소를 현재탭/새탭 중 어디서 열지 지정
+
+
 
   </pre>
+
+
+  <h3>form example</h3>
+
+  <form action="">
+    id: <input type="text" , name="id" value="user01"> // user01 is default value <br><br>
+    password: <input type="password" name="pw"> <br><br>
+
+
+
+    <button>summit</button> // need button tag like this
+
+    // 디폴트이므로 summit 태그겠지
+
+  </form>
+
+  <pre>
+    button tag: create clikable button
+    폼 제출 또는 js관련 기능을 수행하는 역할
+
+    type속성 타입:
+    1. submmit: 폼 태그 내부에 작성되어있다는 가정하에 
+    클릭이 되면 input으로 받은 값을 서버로. 이것이 디폴트
+
+    2. reset: 입력창 안에 작성된 내용을 초기화하는 역할
+
+    3. button: 그냥 버튼이고 js로 연결하게 하는 기본적인 버튼
+
+    // html?id=user01&pw=1234가 됐는데 <br>
+    ?는 제출된 값을 나타내는 문자열의 시작부분<br>
+    id와 pw부분은 input태그의 name속성값을 나타냄<br>
+    user01과 1234는 input태그에 대한 value값을 나타냄<br>
+    각각의 속성과 value가 한쌍으로 묶여서 전달<br>
+
+    <br><br>
+
+
+    html?id=user01&pw=1234의 종합적인 의미:
+
+    name속성값이 id인 input태그에 작성된 값 'user01'과
+    name속성값이 pw인 input태그에 작성된 값 '1234'가
+    get방식으로 제출되었다
+
+    어떻게 get방식인줄 아냐? 
+    
+    근거1) 주소창에 서버 도메인창에 제출된다.
+
+    근거2) network 참고
+
+  </pre>
+
+
+  <form action="">
+    id: <input type="text" , name="id" value="user01"> // user01 is default value <br><br>
+    password: <input type="password" name="pw"> <br><br>
+    <input type="hidden" name="secret" value="hello">
+
+
+    <button>summit</button> // need button tag like this
+
+  </form>
+
+
+
+  <br><br>
+  <hr>
+
+  <h3>다른 form의 예시</h3>
+
+  // 타입이 checkbox or radio인 경우 value 속성값이 없으면 on이라는 값으로 제출되게 된다.
+
+  <br><br>
+  <hr>
+  물론 있으면 작성한 value속성 값으로 제출된다.
+
+
+  <form action="07_이미지관련태그.html" target="_blank" method="get"> //여기로 get방식을 이용해 새 창에서 데이터 제출할래
+<br>
+    <input type="checkbox" name="hobby" value="야구"> 야구를 선택.
+    <input type="checkbox" name="hobby" value="축구"> 축구를 선택.
+    <input type="checkbox" > 게임을 선택.
+    <button>
+      제출합니다.</button>
+  </form>
+
+  <br><br>
+  <hr>
+
+
+  <form action="">
+    <input>
+    <button type="reset">초기화</button>
+  </form>
+
+  <button type="button" id="btn">아무것도 아닌 버튼</button>
+  <br><br>
+  <hr>
+// 이 아래는 바스크립트의 영역입니다
+
+  <script>
+
+    document.getElementById("btn").addEventListener("click",function(){ 
+      alert(" 자바스크립트에 대한 버튼이 클릭됨!!");
+    });
+  </script>
+  
+// 이 위는 자바스크립트의 영역입니다
+
+  <br><br>
+  <hr>
+
+<h3>filedset and legend</h3>
+<pre>
+  filedset: 테두리를 만들어 그룹을 구분하는 영역의 역할
+  legend: 필드셋 테두리에 대한 이름을 붙이는 역할
+</pre>
+
+<form action="">
+  <fieldset>
+    <legend>login form</legend>
+    id: <input> <br>
+    password: <input type="password"> <br>
+    <button>login</button>
+  </fieldset>
+</form> // 특별히 역할은 없고 뉸에 보이게만 한다
+
+
+<h3>textarea + select&option</h3>
+
+
+<h3>textarea태그: 여러 줄을 입력하기 위한 입력상자입니다.</h3>
+
+<textarea name="" id="" rows="20" cols="70" placeholder="입력하세요.." style="resize: none;"
+name="self">
+</textarea>
+
+  
+  
+  <br><br>
+  <hr>
+
+  <h3>select태그와 옵션태그</h3>
+
+  <form action>
+    <select name="test">
+      <option value="1">선택1</option>
+      <option value="2">선택2</option>
+      <option value="3" selected>선택3</option>
+      <option value="4">선택4</option>
+      <option value="5" disabled >선택5</option>
+    </select>
+
+    <br><br><br>
+    // select제출 시 옵션 태그에 value가 없으면 태그 사이에 작성된 값이 제출되는 반면
+    // value가 있다면 value=""이라는 옵션에 있는 값이 제출
+
+
+    <br><br><br>
+    selectd 속성: select의 기본 값을 디폴트가 아닌걸로
+    <button>제출</button>
+
+
+    <br><br><br>
+    // disabled 속성: option 태그 내용 자체를 선택하거나 입력할 수 없도록
+
+
+  </form>
+
+
+  <br><br>
+  // checked속성은 체크박스나 라디오를 체크해두는 속성 <br><br>
+  <input type="checkbox" checked><br>
+  <input type="radio" checked>
+
+  <br><br>
+  <hr>
+
+  <br><br>
+  <hr>
+
+  <br><br>
+  <hr>
+
+  <br><br>
+  <hr>
+
+  <br><br>
+  <hr>
+
+
+
 </body>
 
 </html>
