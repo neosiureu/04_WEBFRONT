@@ -16,11 +16,206 @@
 
   <h3>일단 텍스트 관련 input부터</h3>
 
-  <pr>
+  <pre>
+    <h4>
     type="text"라고 하면 한 줄짜리 문자열(텍스트)를 입력할 수 있는 input box
     텍스트가 들어온다는 것이 디폴트이므로 그냥 input만 쓰면 됨
-  </pr>
+    input타입의 타입과 관련없이 인라인 형식이므로 이어써짐
+  </h4>
+  </pre>
+  <input>
 
+  <pre>
+    <h3>텍스트 관련 인풋 태그의 공용 속성</h3>
+    -size: 입력상자의 크기
+    -maxlength: maximum text
+    -placeholder: 작성된 내용을 설명
+  </pre>
+
+  아이디: <input type="text" size="15" placeholder="아이디 입력">
+
+
+  <br><br>
+  <hr>
+
+  <h4>type="password"</h4>
+
+  <p>비밀번호 전용 상자. 입력 당시에 그대로 노출시키지 않음</p>
+
+  비밀번호: <input type="password" name="" id="">
+  <br><br>
+  <hr>
+
+  <p> 주소 입력 시 사용하는 입력상자</p>
+  홈페이지: <input type="url" value="https://" name="" id="">
+
+  <pre>
+value란 모든 input태그에서 공통적으로 이러한 속성을 가진다
+input태그에 들어갈 디폴트 값을 지정해준다
+웹 주소로 잘 작성했는지 검사도 해준다.
+</pre>
+
+  <br><br>
+  <hr>
+
+  <h4>type="tel"</h4>
+  <p>전화번호 입력시에만 주로 사용한다</p>
+  전화번호 : <input type="tel" placeholder="'-'' 기호를 포함">
+
+
+  <br><br>
+  <hr>
+
+  <h4>type="email"</h4>
+  <p>이메일 입력시에만 주로 사용한다</p>
+  이메일 : <input type="email" placeholder="'@'' 기호를 포함">
+
+  <pre>
+  url email tel등은 닥독 사용 시에는 type="tex와 별 차이가 없다. 
+  다만 폼 태그 내부에서 사용되면 각 타입에 따라 유효한 값이 들어왔는지 검사 
+
+  단 유효한 전화번호, 유효한 이메일을 검사해주는 것은 아니고 모바일 환경에서 키패드를 켜주는 등의 기능만 있음
+
+</pre>
+
+  <br><br>
+  <hr>
+  <h3> 숫자와 관련된 input 태그 </h3>
+  <pre>
+  최소를 나타내는 min태그
+  최대를 나타내는 max태그
+  증감 여부를 나타내는 step태그
+</pre>
+
+
+  <h4>type="number"</h4>
+  <p>
+    숫자만 입력 가능한 입력상자로 브라우저에 따라 올리고내리는 화살표가 생기기도 함
+
+  </p>
+
+  점수입력: <input type="number" step="10">
+
+
+  <br><br>
+  <hr>
+
+  <h4>type="range"</h4>
+
+  <p>슬라이드바를 이용하여 숫자를 지정한다<br>
+    다만 단독 사용은 불가하며 JS에서 같이 사용해야 한다.
+  </p>
+
+  <input type="range" min="0" max="500" step="100">
+
+  <br><br>
+  <hr>
+
+  <input type="date"> <br>
+  <input type="month"> <br>
+  <input type="week"> <br>
+
+
+  <input type="time"> <br>
+  <input type="datetime-local"> <br>
+
+
+
+
+
+  <br><br><br><br><br><br>
+  <hr>
+
+  <h3> radio와 checkbox</h3>
+  <pre>
+    여러 관련된 값을 묶어서 선택하는 경우에 사용하는 input type
+
+    <b style="color: tomato;"> 
+      묶음으로 다루려는 입력을 위한 태그들은 반드시 같은 name속성을 가져야 함
+    </b>
+    name속성
+    <b style="color: magenta;"> 
+    1) radio checkbox뿐 아니라 input태그들 중 관련된 것ㄷ을 묶어서 부를 때
+      그룹이름으로 사용한다  </b>
+   
+
+    2) 서버 쪽에 제출되는 input태그 값의 이름을 지정한다 
+    다만 이 역할을 위해 form태그가 있어야 함
+
+  </pre>
+
+
+  radio: <input type="radio">
+
+
+
+  <br><br>
+
+  checkbox: <input type="checkbox">
+
+
+  <br><br>
+  <hr>
+
+  <h4>type="radio"</h4>
+  성별선택 <br>
+  남 <input type="radio" name="gender">
+  여 <input type="radio" name="gender">
+
+
+  <br><br>
+  <hr>
+
+  label (레이블) 태그는 입력해야할 내용을 설명하는 텍스트를 제공
+  보통 타입이 라디오 또는 체크박스인 것과 연관
+  for속성: 연결할 입력창에 있는 id속성과 일치하게 작성하면
+  입력창과 레이블에 해당하는 태그를 연결해줌???
+  <h4>type="radio"</h4>
+  성별선택 <br>
+  <label for="male"> 남 </label> <input type="radio" name="gender" id="male">
+
+  <label>
+    여 <input type="radio" name="gender">
+  </label>
+
+  <br><br>
+  <hr>
+
+  <h4>type="checkbox"</h4>
+  <h5>취미 선택</h5>
+  <label for=""> 야구
+    <input type="checkbox" name="hobby">
+  </label>
+  <label for=""> 축구
+    <input type="checkbox" name="hobby">
+  </label>
+
+  <label for=""> 농구
+    <input type="checkbox" name="hobby">
+  </label>
+
+
+  <br><br>
+  <hr>
+
+  기타 인풋 태그 
+  type="color": <input type="color"> <br>
+
+
+  <br><br>
+  <hr>
+
+  type="file": <input type="file"> <br>
+
+  <br><br>
+  <hr>
+
+  type="hidden": <input type="hidden" value="홍길동">
+
+  <pre>
+    홍길동이라는 값들은 화면에 보이지는 않아도 실제 서버에는 제출된다.
+
+  </pre>
 </body>
 
 </html>
