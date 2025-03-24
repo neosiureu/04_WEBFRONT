@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>07_레이아웃스타일1</title>
+  <link rel="stylesheet" href="css/layout1.css">
+</head>
+<body>
+
+  <h1>what is layout?</h1>
+  
+  <pre>
+    layout(배치 or 정리)
+    진짜 의미: 구성요소를 제한된 화면내에 효율적으로 배치하는 것
+  </pre>
+  
+  <hr><br>
+
+  <h1>화면 배치방법 (형식) -> display속성</h1>
+
+  <pre>
+    <h2>요소가 화면에 보여지는 형식 지정</h2>
+   
+   <h3> - block: 화면을 수직 분할 (행을 나누기)
+    width또는 height로 설정 </h3>
+
+    
+   <h3> - inline: 화면을 수평 분할 
+    width또는 height 못 건드림 </h3>
+
+    <h3> - inline-block: inline의 수평분할 
+      + 블록의 크기는 조절할 수도 있음 </h3>
+
+    <h3> - none: 화면에 요소가 표시되지는 않으나
+      존재하고 있는 상태 </h3>
+
+    <h3> - flex: 요소의 정렬되는 방향이나 
+      요소간의 간격을 유연하게 처리 </h3>
+  
+  </pre>
+
+  <hr><br>  <hr><br>  <hr><br>
+
+
+  <h3>   블록 형식의 요소, 가령 div로 둘러싼 요소를 inline으로 변경 </h3>
+
+
+  <div class="area1 inline" > 1번의 영역</div>
+  <div class="area2 inline" > 2번의 영역</div>
+  <div class="area3 inline" > 3번의 영역</div>
+  <div class="area4 inline" > 4번의 영역</div>
+  <div class="area5 inline" > 5번의 영역</div>
+
+
+  <hr><br>
+
+
+  <h3>  역으로 인라인 형식의 요소, 가령 span으로 둘러싼 요소를 블록으로 변경 </h3>
+
+  <span class="area1 block" > 1번의 영역</span>
+  <span class="area2 block" > 2번의 영역</span>
+  <span class="area3 block" > 3번의 영역</span>
+  <span class="area4 block" > 4번의 영역</span>
+  <span class="area5 block" > 5번의 영역</span>
+
+
+  <hr><br>
+
+
+
+  <h3>  인라인 블록의 확인 </h3>
+
+  <span class="area1 block inline-block" > 1번의 영역</span>
+  <span class="area2 block inline-block" > 2번의 영역</span>
+  <span class="area3 block inline-block" > 3번의 영역</span>
+  <span class="area4 block inline-block" > 4번의 영역</span>
+  <span class="area5 block inline-block" > 5번의 영역</span>
+
+  <hr><br>
+
+
+ <h1>화면이나 영역을 분할한다</h1>
+ <h2>하나의 네모박스를 상하 2분할</h2>
+ 즉 블록 하나 만들고 위아래를 자르겠다고
+
+
+<pre>
+ 준비물
+
+ 1) 감싸는 전체 영역 요소. 특히 div와 같은 블록 요소가 필요할듯
+
+ 2) 자식이 될 요소
+
+ =>
+
+ display: block으로
+
+ 크기의 단위 (px=고정, %=가변)
+</pre>
+
+
+  <hr><br>
+
+  <!--감싸는 영역 요소는 첫 블록 자체에 -->
+<div id="container-1">
+  <!--블록 내에는 분할할 블록 div를 2개-->
+  <div class="div-1"> </div>
+  <div class="div-1"> </div>
+</div>
+
+
+  <hr><br>
+
+  <pre>
+문제: 상하 3분할
+
+감싸는 영역요소: id = "container-2"
+화면분할 내부요소: class= "div-2"
+분할비율은 20:30:50
+
+ </pre>
+
+
+ <div id="container-2">
+  <!--블록 내에는 분할할 블록 div를 3개-->
+  <div class="div-2"> </div>
+  <div class="div-2"> </div>
+  <div class="div-2"> </div>
+</div>
+
+
+
+  <hr><br>
+
+
+  <pre>
+    문제: 좌우 2분할
+
+    - 감싸는 영역요소 
+    - 내부 분할 요소
+    - 높이와 너비의 크기단위
+    - display의 인라인 블록
+
+    
+    </pre>
+
+
+    
+    <div id="container-3">
+      <div class="div-3"> </div>
+      <div class="div-3"> </div>
+    </div>
+
+<!-- 두 요소 사이에 엔터 즉 공백이 있다는 것은 한 칸을 차지하는 것과 동치라서 -->
+
+
+
+
+
+
+
+
+<pre></pre>
+
+ 
+
+
+  <h3>dispaly: none</h3>
+
+  <pre>요소는 존재하지만 화면에는 보이지 않음</pre>
+  화면에는 보이지 않지만 투명은 아니다 => 보이지 않아도 공간마저 차지하지 않음
+  반면 visibility: hidden을 쓰면 투명이 맞다.
+
+  <hr><br>
+
+
+  <div class="div-4">test</div>
+  <div class="div-4" id="test4">test</div>
+  <div class="div-4">test</div>
+
+
+  <pre></pre>
+
+  <hr><br>
+
+
+  <hr><br>
+
+
+  <hr><br>
+
+
+  <hr><br>
+
+
+
+  <hr><br>
+
+
+  <hr><br>
+
+
+</body>
+</html>

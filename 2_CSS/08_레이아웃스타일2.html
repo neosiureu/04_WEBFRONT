@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>08_레이아웃스타일2</title>
+  <link rel="stylesheet" href="css/layout2.css">
+</head>
+<body>
+  <h1>요소의 영역, 특히 여백과 관련된 속성이 있다</h1>
+
+  <pre>
+    HTML요소들은 요소마다 총 4가지의 영역을 가짐
+
+    1) content영역
+    - 요소의 내용이 작성되는 영역
+    (시작과 종료 태그 사이에 작성되는 내용)
+
+    2) padding영역
+    - content영역과 border영역(테두리)영역 사이
+
+    3) border영역
+    - 요소의 테두리가 지정
+    - content영역 바깥에서 content를 감싼다
+
+    4) margin영역
+    - 다른 요소와의 간격을 나타냄
+
+
+  </pre>
+
+
+<div class="box" > 내용입니다</div>
+
+<br>
+<hr>
+
+
+<h3>콘텐츠 영역</h3>
+
+<div class="box conent" > 내용입니다</div>
+
+<br>
+<hr>
+
+
+<h3>border 영역</h3>
+
+<div class="box border" > 내용입니다</div>
+
+<br>
+<hr>
+
+<h3>padding 영역</h3>
+
+<div class="box padding" > 내용입니다</div>
+
+<br>
+<hr>
+
+<h3>margin 영역</h3>
+<div class="box margin" > 내용입니다</div>
+<div class="box margin" id="m1" > 내용입니다</div>
+
+
+<br>
+<hr>
+
+<h2>padding border 그리고 margin을 어떻게 써야하나?</h2>
+
+
+<pre>
+padding과 boder, 그리고 margin은 방향에 따라 크기를 지정할 수 있다  
+???-top
+???-bottom
+???-left
+???-right
+
+???에는 각각 padding border margin이 들어갈 수 있다
+
+
+</pre>
+
+<br>
+<hr>
+
+<h3>padding 테스트</h3>
+<div class= "box padding-test " > 내용입니다. </div>
+
+<br>
+<hr>
+
+<h3>bodder 테스트</h3>
+<div class= "box border-test " > 내용입니다. </div>
+
+<br>
+<hr>
+
+<h3>margin : auto라는 테스트</h3>
+
+<br>
+<hr>
+
+<div class="box-container"> 
+  <div class="box margin-auto"></div>
+</div>
+
+
+<br>
+<hr>
+
+
+<h2>box-sizing속성 </h2>
+
+<pre>
+요소의 영역 중 실제로 화면상에 보여지는 부분인 
+content, padding, border는 각각의 크기를 지정할 수 있다
+그러다보니 전체적인 크기에 대한 계산이 힘들다/
+width와 height는 콘텐츠 영역 뿐이므로 papdding과 border를 따로 더해야 한다
+
+이를 보완하기 위해 box-sizing => 요소 내의 크기를 어떻게 계산하는지 사용자가 정의 
+</pre>
+
+
+
+
+<br>
+<hr>
+
+<div class="box" id="box-sizing"> 내용입니다. </div>
+
+
+<br>
+<hr>
+
+
+
+</body>
+</html>

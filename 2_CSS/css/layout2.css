@@ -1,0 +1,108 @@
+.box{
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+}
+
+.content{
+  width: 150px;
+  height: 150px;
+  /*디폴트로 이렇게 쓰면 
+  4영역 중 콘텐츠 영역의 크기만을 지정*/
+}
+
+/*다른 영역은 border 영역*/
+
+.border{
+  border: 10px solid red
+}
+
+.padding{
+  padding: 30px;
+}
+
+.margin{
+  margin: 50px;
+}
+
+#m1{
+  margin: 100px;
+}
+
+/* 
+서로 다른 요소의 margin이 겹칠 경우  더 큰 마진을 가진 요소의 값을 따른다. 
+즉 큰걸로 덮어 씌워진다
+*/
+
+
+.padding-test{
+  /*
+  padding-top: 20px;
+  padding-bottom: 50px;
+  padding-left: 30px;
+  padding-right: 100px;
+  padding: 50px 100px;
+  */
+ 
+
+  
+  
+  /*
+  작성법을 다르게 하면 한번에 padding의 특정 방향에 대한 크기 지정 가능
+  */
+
+  padding: 10px 20px 30px 40px;
+
+
+}
+
+.border-test{
+  
+  /*
+  border-top: 20px;
+  border-bottom: 50px;
+  border-left: 30px;
+  border-right: 100px;
+  만 사용 가능하다. 따로 px를 늘어놓으므로서 보더를 완성할 수는 없음
+  */
+
+  border-top: 3px solid black;
+  border-bottom: 5px dashed magenta;
+  border-left: 10px dotted blue;
+  border-right: 10px double orange;
+
+
+}
+
+.box-container{
+  border: 2px solid black;
+  width: 500px;
+  height: 300px;
+
+}
+
+.margin-auto{
+  margin: auto;
+  margin-top:100px;
+
+}
+
+#box-sizing{
+  /*
+  테두리 상하좌우 10, 패딩 상하좌우20 나머지는 컨텐츠
+  전체 요소의 픽셀은 300x300인 정사각형을 만들고 싶다
+  */
+
+
+  border: 10px solid slategrey;
+  padding: 20px;
+
+  width: 300px;
+  height: 300px;
+
+  box-sizing: border-box;
+
+  /*
+  width height에 padding과 border가 포함되되 콘텐츠 영역을 자동 계산하게 한다
+  */
+}
