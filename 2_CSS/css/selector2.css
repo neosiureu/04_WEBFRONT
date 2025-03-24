@@ -28,10 +28,18 @@ p[name="name-1"]{
 
 /*후손 선택자*/
 
-#test-div p{ /*>가 아닌 그냥 띄어쓰기*/
+#test-div > p {
+  background-color: lightblue;
+}
 
+/* test-div 내부의 모든 후손 p 태그 */
+#test-div p {
   background-color: yellowgreen;
+}
 
+/* 진짜 후손만 별도로 지정하려면 구조 이용 (자식이 아닌 후손만) */
+#test-div > div > p {
+  background-color: lightcoral;
 }
 
 
@@ -41,3 +49,83 @@ p[name="name-1"]{
 div[test="leejuwon"]{
   background-color: blanchedalmond;
 } 
+
+/*후손 선택자*/
+
+
+.div-cls{
+  bodrder: 1px solid black;
+  width: 200px;
+  height: 200px;
+  background-color: gray;
+
+  margin-bottom: 30px; 
+  /*아래로부터 좀 떨어지게 
+  여백을 30픽셀 지정*/
+
+cursor: pointer;
+/*해당 요소에 마우스커서가 올라가면 
+손가락 모양이 나타나도록*/
+
+
+}
+
+#active-test:active{
+  background-color: yellowgreen;
+}
+
+
+#hover-test:hover{
+  background-color: tomato;
+  width: 230px;
+  height: 500px;
+}
+
+#hover-test{
+  transition-duration: 10s;}
+
+  /* css속성, 특히 hovertest요소가 변화를 일으키면 
+  해당 초동안 천천히 바뀌어라
+ 
+  트랜지션: HTML요소가 한 상태에서 다른 상태로 변할때의 
+  변화를 부드럽게 만들어주는 애니메이션 효과
+  
+  */
+
+
+
+
+  #focus-test:focus{
+    background-color:antiquewhite ;
+  }
+
+
+input[name="fruits"]:checked{
+  width: 30px;
+  height: 30px;
+  background-color: blueviolet;
+}
+
+#test-div2 > input:enabled{
+  background-color: greenyellow;
+}
+
+#test-div2 > input:disabled{
+  background-color: tomato;
+}
+
+/* 동위 선택자*/
+
+
+#div1 + div {
+  background-color: rebeccapurple;
+}
+
+
+#div1 + div +div {
+  background-color: burlywood;
+}
+
+#div3 ~ div {
+  background-color: skyblue;
+}

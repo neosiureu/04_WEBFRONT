@@ -1,0 +1,124 @@
+/*일반구조 선택자*/
+
+/* first-child 형제관계 요소 중 첫번째요소
+*/
+
+
+#test1 > p:first-child {
+  background-color: red;
+
+}
+
+/* id가 test1인 자식 요소 중  (>)
+형제 관계의 요소중 p태그인 것이 (p:) 
+첫번째 요소라면  (first-child)
+한정으로 css주겠다
+*/
+
+/* last-child 형제관계 요소 중 첫번째요소
+*/
+
+
+#test1 > p:last-child {
+  background-color: orange;
+}
+
+/* id가 test1인 자식 요소 중  (>)
+형제 관계의 요소중 p태그인 것이 (p:) 
+마지막요소라면  (last-child)
+한정으로 css주겠다
+아님! 형제가 p가 아니라 pre임
+=> 따라서 스타일 적용이 되지 않음
+*/
+
+
+
+/*
+형제관계 요소 중 지정된 수열번째 요소를 모두 선택한다
+- 다만 수열의 순서 따질 때 1부터 시작
+*/
+
+
+#test1 > p:nth-child(2) {
+  background-color: yellow;
+}
+
+/* id가 test1인 자식 요소 중  (>)
+형제 관계의 요소중 p태그인 것이 (p:) 
+두번째요소라면  (nth-child(2))
+한정으로 css주겠다
+
+*/
+
+
+
+#test1 > p:nth-child(4) {
+  background-color: greenyellow;
+}
+
+
+#test1 > p:nth-child(2n-1) {
+  background-color: skyblue;
+  font-size: 30px;
+}
+
+#test1 > p:nth-child(2n) {
+  background-color: violet;
+  border: 3px solid black;
+}
+
+
+/*
+형제관계의 요소 중 
+뒤에서 카운트한 수열번째 요소를 모두 선택
+*/
+
+#test1 > :nth-last-child(2) {
+  color: red;
+}
+
+
+
+
+#test2 > p:first-of-type {
+  color: orange;
+}
+
+/*p태그 중에서만 봤을 때 첫번째 요소인지 묻는 것*/
+
+#test2 > p:last-of-type {
+  color: skyblue;
+}
+/*p태그 중에서만 봤을 때 마지막 요소인지 묻는 것*/
+
+
+
+
+
+#test2 > p:nth-of-type(2n-1) {
+  font-size: 30px;
+}
+/* nth-of-type(수열)
+같이 선택된 형제들 한정으로 수열번쨰 모든 요소를 선택한다
+*/
+
+#test2 > p:nth-last-of-type(2n) {
+  background-color: brown;
+}
+
+/* 
+nth-last-of-type(수열)
+같이 선택된 형제들 한정으로 뒤에서부터 수열번쨰 모든 요소를 선택한다
+*/
+
+
+
+#test3 > li:not(:nth-of-type(3n)){
+  background-color: aqua;
+
+}
+
+
+/*부정선택자*/
+/* #test3자식 li요소 중 3의 배수를 제외한 요소만 선택하여 배경색 aqua 설정*/
+

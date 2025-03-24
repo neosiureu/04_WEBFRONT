@@ -1,0 +1,38 @@
+/*only-child*/
+
+#test1 > :only-child{
+  background-color: steelblue;
+}
+
+
+#test2 > :only-of-type{
+  background-color: red;
+}
+
+#test3 > :empty{
+  background-color: greenyellow;
+  height: 30px;
+}
+
+
+#test4-1, #test4-2, .test4-3 {
+  background-color: yellow;
+  color: red;
+}
+
+/* 특정 요소 내부에 있는 특정 클래스만 선택하기
+test가 5-1인 후손 중 클래스가 c5인 요소를 선택
+*/
+
+#test5-1 .c5{
+  background-color: aqua;
+}
+
+#test5-2 > li.c5{
+  background-color: tomato;
+}
+
+
+.test6.c6{
+  background-color: darkblue;
+}

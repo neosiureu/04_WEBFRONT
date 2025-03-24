@@ -31,7 +31,7 @@
   </pre>
 
 
-  <div  test="lejuwon">div1</div>
+  <div test="lejuwon">div1</div>
   <div name="name-1">div2</div>
   <div name="name-2">div3</div>
   <div name="name-2">div4</div>
@@ -78,8 +78,190 @@
   <div>
     <p>여기는 test-div의 후손요소입니다. 진짜 후손입니다</p>
   </div>
-
 </div>
+
+
+<br><hr><br>
+
+<h2>반응선택자</h2>
+
+<pre> 
+사용자 움직임에 따라 
+반응하여 css스타일이 달라지는 선택자
+
+요소를 클릭하고 있는 경우 (콜론 + active)
+요소에 마우스가 올라가는 경우 (콜론 + hover)
+
+</pre>
+
+<br><hr><br>
+
+
+<div class ="div-cls" id="active-test"> :active 테스트</div>
+<div class ="div-cls" id="hover-test"> :active 테스트</div>
+
+
+
+<br><hr><br>
+
+<h2>상태선택자</h2>
+<pre>
+
+입력 양식(input또는 그와 관련된 태그)의 
+상태에 따라 선택되는 선택자 
+
+:focus란? 요소에 초점이 맞춰졌을 때
+
+:checked란? 요소에 체크된 당시에만 (radio또는 checkbox)
+
+:enabled 또는
+
+:disalbed란? 요소가 사용 가능하거나 불가능한 상태일 때 한정으로
+</pre>
+
+<br><hr><br>
+
+<h4>:focus</h4>
+
+<input id="focus-test" type="text">
+
+<br><hr><br>
+
+<h4>checked</h4>
+사과 <input type="checkbox" name="fruits"> <br>
+
+바나나 <input type="checkbox" name="fruits"> <br>
+
+딸기 <input type="checkbox" name="fruits"> <br>
+
+<br><hr><br>
+
+
+<br><hr><br>
+
+<h4>:enabled 또는 :disalbed</h4>
+
+<h5>요소가 사용가능한게 뭔데?</h5>
+
+<div id="test-div2">
+  사용 가능한 inputbox: <input type="text" enabled><br>
+  사용 불가능한 inputbox: <input type="text" disabled><br>
+</div>
+
+<pre>
+기본으로 input태그들은 enabled 상태이다.  
+</pre>
+
+<br><hr><br>
+
+<h3>동위 선택자</h3>
+
+<pre>
+동위 관게에서, 즉 부모자식이 아닌 형제 관계에서 
+다음 element의 요소를 선택하는 선택자
+
+위 예시에서 div와 input은 부모자식이지만 
+input끼리는 형제인 셈
+
+가령 태그가
+A
+B
+B
+B
+이렇게 있으면 
+
+1) A선택자 + B선택자 {css코드;}
+A바로 뒤에 있는 B요소 하나를 선택(+의 이용)
+
+2) A선택자 ~ B선택자 {css코드;}
+A뒤에 있는 모든 B의 요소를 선택한다 (~의 이용)
+
+</pre>
+
+
+<div id="div1" >1번입니다. </div>
+<div>2번입니다. </div>
+<div id="div3">3번입니다. </div>
+<div>4번입니다. </div>
+<div>무관한 tag입니다! </div>
+<div>5번입니다. </div>
+
+<br><hr><br>
+
+
+
+<br><hr><br>
+
+
+
+<br><hr><br>
+
+
+
+<br><hr><br>
+
+
+<br><hr><br>
+
+
+<br><hr><br>
+
+
+
+<br><hr><br>
+
+
+
+<br><hr><br>
+
+
+<br><hr><br>
+
+
+
+<br><hr><br>
+
+
+
+<br><hr><br>
+
+
+<br><hr><br>
+
+
+<br><hr><br>
+
+
+
+<br><hr><br>
+
+
+
+<br><hr><br>
+
+<br><hr><br>
+
+
+
+<br><hr><br>
+
+
+
+<br><hr><br>
+
+
+<br><hr><br>
+
+
+<br><hr><br>
+
+
+
+<br><hr><br>
+
+
+
+<br><hr><br>
 
 </body>
 </html>
