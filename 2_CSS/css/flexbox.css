@@ -1,8 +1,3 @@
-div {
-  border: 1px solid black;
-  box-sizing: border-box;
-  /* content + padding + border 합으로 width/height 지정 */
-}
 
 
 .item {
@@ -51,7 +46,7 @@ div {
   height: 800px;
   /*높이 좀 주려고*/
   display: flex;
-}
+
 
 /* 지금부터 (자식태그를 감싸는) 
   부모태그의 형식을 flexbox로 변경하겠습니다.
@@ -71,47 +66,47 @@ div {
 
 
 
-/*
-  flex-direction: row; 
-  행방향인 가로로 정렬하는 것이 기본 값
-  */
+
+  /* flex-direction: row;  */
+  /* 행방향인 가로로 정렬하는 것이 기본 값 */
+  
 
 
-/*flex-direction: row-reverse; */
+/* flex-direction: row-reverse; */
 /*행방향이긴 하지만 순서가 뒤집어짐*/
 
-/*flex-direction: column;*/
+/* flex-direction: column; */
 
 
-/*
-flex-direction: column-reverse;
-*/
+
+/* flex-direction: column-reverse; */
+
 
 /*
   flex-wrap은 부모전용 속성으로 
   내부 item들을 포장하는 속성
   각 item들이 강제로 한줄에 배치되도록 할지
   한 줄을 벗어나 여러 줄로 배치되게 할지 정한다
-  
-  flex-wrap: nowrap;
+  */
+  /* flex-wrap: nowrap; */
 
-  flex-wrap: wrap ;
+  /* flex-wrap: wrap ; */
 
-  아이템을 반대로 배치하는 것 
-  flex-wrap: wrap-reverse ;*/
+  /* 아이템을 반대로 배치하는 것  */
+  /* flex-wrap: wrap-reverse ;  */
 
 
 /*
   부모전용속성 justify-content => 메인축의 방향으로 item의 정렬 방향을 조절함
 옵션이 flex-start이면 메인축 앞쪽에 붙어, flex-end이면 메인축 뒤쪽에 붙어
 
-row-reverse와 다른 점? 순서가 뒤집어지진 않음!!!!!!!!!!!!!
+row-reverse와 다른 점? 순서가 뒤집어지진 않음!!!!!!!!!!!!!*/
 
-justify-items: flex-start;
+/* justify-items: flex-start; */
 
-justify-content: flex-end;
+/* justify-content: flex-end; */
 
-*/
+
 
 
 
@@ -119,30 +114,32 @@ justify-content: flex-end;
 
 
 /*
-메인 축 방향으로 가운데 정렬
+메인축 방향으로 가운데 정렬
 */
 
-/* flex-direction: column; 
+/* flex-direction: column;
 
-justify-content: center; */
+justify-content: flex-start;  */
 
 
 /* 첫아이템과 마지막 아이템이 붙어있음 
 즉 양끝쪽은 주축의 시작쪽에붙인 상태에서 item 간격을 브라우저의 크기에 따라 일정하게 정렬하는 방법
-justify-content: space-between;
+*/
+
+/* justify-content: space-between; */
+
+
+
+
+/* justify-content: space-around; */
+
+/*양 끝쪽에 공간이 좀 있지만 똑같이 브라우저의 크기에 따라 일정 간격으로 정렬
 */
 
 
-/*
-justify-content: space-around;
-양 끝쪽에 공간이 좀 있지만 똑같이 브라우저의 크기에 따라 일정 간격으로 정렬
-*/
 
-
-/*
-justify-content: space-evenly;
-양 끝도 중간도 전부 일정한 간격으로 정렬
-*/
+/* justify-content: space-evenly; */
+/* 양 끝도 중간도 전부 일정한 간격으로 정렬 */
 
 
 
@@ -154,6 +151,7 @@ justify-content: space-evenly;
 
 
 
+align-items: center;
 
 /* 
 주축이 아닌 교차축에 대한 부모 속성으로 item을 교차축 방향으로 정렬하는 방법을 지정하는 속성 
@@ -162,7 +160,7 @@ justify-content: space-evenly;
 
 
 
-
+}
 
 #con {
   width: 450px;
@@ -214,14 +212,14 @@ width와 유사하나 앞으로 보게 될 flex-grow또는 flex-shrink에 의해
   width: 75px;
   height: 75px;
 }
-라는 요소 본래의 크기만 가진다는 말이다
+이라 했으므로 요소 본래의 크기만 가진다는 말이다
 
 0이라고 하면 본래 요소의 크기 중 content만을 남겨두고 차지하는 영역 없음을 의미
 
 */
 
 .basis-20 {
-  flex-basis: 20%;
+  flex-basis: 0;
   /* item1이라는 콘텐츠만큼만 남겨두고 차지하는 영역이 다 사라짐 
   
   flex-basis: 20%
@@ -343,9 +341,7 @@ flex-shrink: 2이면 → 나는 많이 줄어들 수 있어!
 
 
 
-/*basis grow shrink를 한번에 쓸 수 있는 flex속성을 이용하기 위한 css*/
-
-/*
+/*basis grow shrink를 한번에 쓸 수 있는 flex속성을 이용하기 위한 css
 flex: 
 flexbox 컨테이너 내에서 아이템의 크기와 배율을 자율적으로 설정한다
 
@@ -483,6 +479,7 @@ flex-shrink: 공간 부족하면 줄어들 수 있는 정도
   background-color: tomato;
 }
 
+/*----------문제2 나의 풀이------------*/
 
 .container-2{
   width: 800px;
@@ -522,6 +519,47 @@ flex-shrink: 공간 부족하면 줄어들 수 있는 정도
   background-color: blue;
 }
 
+/*----------문제2 정답------------*/
+
+.container2{
+  width: 800px;
+  height: 500px;
+  display: flex;
+  flex-direction:  column;
+}
+
+.header2{
+  background-color: red;
+  flex-basis: 20%;
+}
+
+.body2{
+  background-color: red;
+  display: flex;
+  flex-basis: 80%;
+}
+
+.body2-left{
+  flex-basis: 30%;
+  background-color: yellow;
+}
+
+.body2-right{
+  flex-direction:  column;
+  flex-basis: 70%;
+  display: flex;
+  background-color: yellow;
+}
+
+.body2-right > div:nth-child(1){
+  flex-basis: 80%;
+  background-color: greenyellow;
+}
+
+.body2-right > div:nth-child(2){
+  flex-basis: 20%;
+  background-color: blue;
+}
 
 
 /*----------문제3 나의 풀이------------*/
@@ -541,6 +579,7 @@ flex-shrink: 공간 부족하면 줄어들 수 있는 정도
 .d3 {
   flex-basis: 70%;
   display: flex;
+  height: 560px;   /* 800px의 70%  이렇게?*/ 
 }
 
 .dl3 {
@@ -551,14 +590,13 @@ flex-shrink: 공간 부족하면 줄어들 수 있는 정도
 .dr3 {
   flex-basis: 75%;
   display: flex;
-  flex-direction: column; /* ← 추가 */
+  flex-direction: column;
 }
 
 .dru3 {
   flex-basis: 50%;
   display: flex; 
   height: 50%;
-
 }
 
 .drul3 {
@@ -575,273 +613,9 @@ flex-shrink: 공간 부족하면 줄어들 수 있는 정도
   flex-basis: 50%;
   background-color: pink;
   height: 50%;
-
-}
-
-
-
-/*----------문제4 나의 풀이------------*/
-
-
-.container-4{
-  width: 800px;
-  height: 800px;
-  flex-direction: column;
-  display:flex;
-}
-
-.header-4, .footer-4{
-  background-color: green;
-  flex-basis: 20%;
-}
-
-.body-4{
-  flex-basis: 60%;
-  display:flex;
-}
-
-.bodyleft-4{
-  flex-basis: 35%;
-  background-color: yellow;
-}
-
-.bodyright-4{
-  flex-basis: 65%;
-  display: flex;
-  flex-direction: column;
-
-}
-
-.bodyru-4{
-  border: 0px;
-
-  flex-basis: 60%;
-  background-color: orange;
-}
-
-.bodyrd-4{
-  border: 0px;
-
-  flex-basis: 40%;
-  display: flex;
-}
-
-.bodyrd-4-1{
-  border: 0px;
-  flex-basis: 30%;
-  background-color: red;
-
-}
-
-.bodyrd-4-2{
-  border: 0px;
-
-  flex-basis: 5%;
-  background-color: orange;
-
-}
-
-.bodyrd-4-3{
-  border: 0px;
-
-  flex-basis: 30%;
-  background-color: red;
-
-}
-
-.bodyrd-4-4{
-  border: 0px;
-
-  flex-basis: 5%;
-  background-color: orange;
-
-}
-
-.bodyrd-4-5{
-  border: 0px;
-
-  flex-basis: 30%;
-  background-color: red;
-
-}
-
-
-
-/*----------문제5 나의 풀이------------*/
-
-.container-5{
-  width: 800px;
-  height: 800px;
-  flex-direction: column;
-  display:flex;
-}
-
-.up{
-  display:flex;
-  flex-basis: 25%;
-}
-
-.u-child1{
-  flex-basis: 20%;
-  background-color: yellow;
-
-}
-
-
-.u-child2{
-  flex-basis: 40%;
-  background-color: yellow;
-
-}
-
-.u-child3{
-  flex-basis: 40%;
-  background-color: yellow;
-
-}
-
-.down{
-  flex-basis: 80%;
-  display: flex;
-}
-
-
-.d1{
-  flex-direction: column;
-  display: flex;
-  flex-basis: 40%;
-}
-.d1-child{
-  background-color: aqua;
-  flex-basis: 33.3%;
-}
-
-.d2{
-  background-color: pink;
-  flex-basis: 10%;
-
-}
-
-.d4{
-  flex-direction: column;
-  display: flex;
-  flex-basis: 10%;
-}
-
-
-.d4-child-1, .d4-child-3{
-  background-color: pink;
-  flex-basis: 15%
-}
-
-.d4-child-2{
-  
-  background-color: pink;
-  flex-basis: 70%
-
-}
-
-.d3{
-  display: flex;
-  flex-direction: column;
-  flex-basis: 40%
-}
-
-.d3-u{
-  background-color: orange;
-  flex-basis: 55%
-
-}
-
-.d3-d{
-  display: flex;
-  flex-basis: 45%
-}
-
-.d3-dl{
-  display: flex;
-  flex-direction: column;
-  background-color: green;
-
-  flex-basis: 70%
-}
-
-.d3-dl-c1{
-  border: 0px;
-
-  flex-basis: 50%
-
-}
-
-.d3-dl-c2{
-  border: 0px;
-
-  flex-basis: 50%
-
-}
-
-.d3-dr{
-  border: 0px;
-  background-color: red;
-  flex-basis: 50%
-
-}
-
-
-
-
-
-
-
-
-/*----------문제2 정답------------*/
-
-.container2{
-  width: 800px;
-  height: 500px;
-  display: flex;
-  flex-direction:  column;
-
-}
-.header2{
-  background-color: red;
-  flex-basis: 20%;
-}
-
-.body2{
-  background-color: red;
-  display: flex;
-
-  flex-basis: 80%;
-}
-
-.body2-left{
-  flex-basis: 30%;
-  background-color: yellow;
-}
-
-.body2-right{
-  flex-direction:  column;
-
-  flex-basis: 70%;
-  display: flex;
-  background-color: yellow;
-}
-
-.body2-right > div:nth-child(1){
-  flex-basis: 80%;
-  background-color: greenyellow;
-
-}
-
-.body2-right > div:nth-child(2){
-  flex-basis: 20%;
-  background-color: blue;
-
 }
 
 /*----------문제3 정답------------*/
-
 
 .container3{
   width: 800px;
@@ -891,13 +665,72 @@ flex-shrink: 공간 부족하면 줄어들 수 있는 정도
   background-color: magenta;
 }
 
+/*----------문제4 나의 풀이------------*/
 
+.container-4{
+  width: 800px;
+  height: 800px;
+  flex-direction: column;
+  display:flex;
+}
 
+.header-4, .footer-4{
+  background-color: green;
+  flex-basis: 20%;
+}
 
+.body-4{
+  flex-basis: 60%;
+  display:flex;
+}
 
+.bodyleft-4{
+  flex-basis: 35%;
+  background-color: yellow;
+}
+
+.bodyright-4{
+  flex-basis: 65%;
+  display: flex;
+  flex-direction: column;
+}
+
+.bodyru-4{
+  flex-basis: 60%;
+  background-color: orange;
+}
+
+.bodyrd-4{
+  flex-basis: 40%;
+  display: flex;
+}
+
+.bodyrd-4-1{
+  flex-basis: 30%;
+  background-color: red;
+}
+
+.bodyrd-4-2{
+  flex-basis: 5%;
+  background-color: orange;
+}
+
+.bodyrd-4-3{
+  flex-basis: 30%;
+  background-color: red;
+}
+
+.bodyrd-4-4{
+  flex-basis: 5%;
+  background-color: orange;
+}
+
+.bodyrd-4-5{
+  flex-basis: 30%;
+  background-color: red;
+}
 
 /*----------문제4 정답------------*/
-
 
 .container4{
   width: 800px;
@@ -921,8 +754,6 @@ flex-shrink: 공간 부족하면 줄어들 수 있는 정도
   background-color: yellow;
 }
 
-
-
 .body4-right{
   flex-basis: 70%;
   background-color: orange;
@@ -934,13 +765,108 @@ flex-shrink: 공간 부족하면 줄어들 수 있는 정도
 .body4-right > div{
   width: 30%;
   height: 50%;
-background-color: red;
-
+  background-color: red;
 }
 
+/*----------문제5 나의 풀이------------*/
+
+.container-5{
+  width: 800px;
+  height: 800px;
+  flex-direction: column;
+  display:flex;
+}
+
+.up{
+  display:flex;
+  flex-basis: 25%;
+}
+
+.u-child1{
+  flex-basis: 20%;
+  background-color: yellow;
+}
+
+.u-child2{
+  flex-basis: 40%;
+  background-color: yellow;
+}
+
+.u-child3{
+  flex-basis: 40%;
+  background-color: yellow;
+}
+
+.down{
+  flex-basis: 80%;
+  display: flex;
+}
+
+.d1{
+  flex-direction: column;
+  display: flex;
+  flex-basis: 40%;
+}
+
+.d1-child{
+  background-color: aqua;
+  flex-basis: 33.3%;
+}
+
+.d2{
+  background-color: pink;
+  flex-basis: 10%;
+}
+
+.d4{
+  flex-direction: column;
+  display: flex;
+  flex-basis: 10%;
+}
+
+.d4-child-1, .d4-child-3{
+  background-color: pink;
+  flex-basis: 15%;
+}
+
+.d4-child-2{
+  background-color: pink;
+  flex-basis: 70%;
+}
+
+.d3{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 40%;
+}
+
+.d3-u{
+  background-color: orange;
+  flex-basis: 55%;
+}
+
+.d3-d{
+  display: flex;
+  flex-basis: 45%;
+}
+
+.d3-dl{
+  display: flex;
+  flex-direction: column;
+  background-color: green;
+  flex-basis: 70%;
+}
+
+.d3-dl-c1, .d3-dl-c2{
+  flex-basis: 50%;
+}
+
+.d3-dr{
+  background-color: red;
+  flex-basis: 50%;
+}
 
 /*----------문제5 정답------------*/
-
 
 .container5{
   width: 800px;
@@ -959,16 +885,15 @@ background-color: red;
   flex-basis: 20%;
 }
 
-.header5 > div:nth-child(2) , .header5 > div:nth-child(3){
+.header5 > div:nth-child(2),
+.header5 > div:nth-child(3){
   flex-basis: 40%;
 }
-
 
 .body5{
   flex-basis: 70%;
   display: flex;
 }
-
 
 .body5 .left{
   flex-basis: 30%;
@@ -978,7 +903,7 @@ background-color: red;
 }
 
 .body5 .left > div{
-  flex-basis: calc(100%/3);
+  flex-basis: calc(100% / 3);
 }
 
 .body5 .right {
@@ -1005,7 +930,6 @@ background-color: red;
 .right-bottom{
   flex-basis: 50%;
   display: flex;
-
 }
 
 .right-b-l{
@@ -1013,14 +937,13 @@ background-color: red;
   background-color: green;
   display: flex;
   flex-direction: column;
-
 }
 
 .right-b-l > div {
   flex-basis: 50%;
 }
 
-.right-b-r  {
+.right-b-r {
   flex-basis: 50%;
   background-color: red;
 }
@@ -1033,7 +956,6 @@ background-color: red;
 .right-3 > div:nth-child(1),
 .right-3 > div:nth-child(3){
   flex-basis: 20%;
-
 }
 
 .right-3 > div:nth-child(2){

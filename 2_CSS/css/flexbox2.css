@@ -1,0 +1,53 @@
+/*----------문제3 나의 풀이------------*/
+
+.container-3 {
+    width: 800px;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .u3 {
+    background-color: yellow;
+    flex-basis: 30%;
+  }
+  
+  .d3 {
+    flex-basis: 70%;
+    display: flex;
+  }
+  
+  .dl3 {
+    flex-basis: 25%;
+    background-color: blue;  
+  }
+  
+  .dr3 {
+    flex-basis: 75%;
+    display: flex;
+    flex-direction: column; /* ← 추가 */
+  }
+  
+  .dru3 {
+    flex-basis: 50%;
+    display: flex; 
+    height: 50%;
+  
+  }
+  
+  .drul3 {
+    flex-basis: 65%;
+    background-color: aqua;
+  }
+  
+  .drur3 {
+    flex-basis: 35%;
+    background-color: red;
+  }
+  
+  .drd3 {
+    flex-basis: 50%;
+    background-color: pink;
+    height: 50%;
+  
+  } 
