@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>00_포트폴리오</title>
+  <link rel="stylesheet" href="css/00_포트폴리오.css" />
+  <!-- 필요한 폰트 아이콘 링크들 -->
+</head>
+<body>
+  <!-- 🔷 헤더 -->
+  <header>
+    <section><span class="material-symbols-outlined">menu</span></section>
+    <section>
+      <a href="#">
+        <img src="../images/gitlogo.jpg" id="home-logo" />
+        <h2>Dashboard</h2>
+      </a>
+    </section>
+    <section class="right-group">
+      <!-- 검색창/드롭다운/아이콘 생략 -->
+    </section>
+  </header>
+
+  <!-- 🔷 전체 레이아웃: 왼쪽 nav + 가운데 main -->
+  <div class="layout-container">
+    <!-- 🔹 왼쪽 사이드바 -->
+    <nav class="sidebar">
+      <section class="sidebar-header">
+        <section class="top-nav">
+          <span>Top repository</span>
+          <section class="new-btn-wrapper">
+            <button class="new-button">🖥️New</button>
+          </section>
+        </section>
+        <section>
+          <input type="text" placeholder="Find a repository.." />
+        </section>
+        <ul>
+          <li><a href="#">neosiureu/01_Java</a></li>
+          <li><a href="#">neosiureu/02_DB</a></li>
+          <li><a href="#">neosiureu/04_WEBFRONT</a></li>
+          <li><a href="#">neosiureu/03_JDBC</a></li>
+          <li><a href="#">neosiureu/01_Java_network</a></li>
+        </ul>
+      </section>
+    </nav>
+
+    <!-- 🔹 가운데 main (2열 7행 그리드) -->
+    <main>
+      <div class="grid-layout">
+        <!-- 왼쪽 열: 1~7행 -->
+        <section>ask-copilot영역</section>
+        <section>빠른 접근</section>
+        <section>튜토리얼 카드</section>
+        <section>README</section>
+        <section>도구 모음</section>
+        <section>시작하기</section>
+        <section>트렌딩</section>
+    
+        <!-- 오른쪽 열: 1행과 2행 -->
+        <section class="right-cell">최종영역1</section>
+        <section class="right-cell">최종영역2</section>
+      </div>
+    </main>
+  </div>
+
+  <footer></footer>
+</body>
+</html>

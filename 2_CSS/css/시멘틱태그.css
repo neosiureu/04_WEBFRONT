@@ -1,0 +1,412 @@
+* {
+  box-sizing: border-box;
+  /* 마진 빼고 컨첸츠 패딩 보더 합쳐서 박스 크기로 삼자 */
+
+  /* border: 1px solid; */
+  /* 선을 명확히 보이게 하기 위해. 마지막에 지우면 됨 */
+}
+
+body {
+  margin: 0;
+}
+
+/* 바디가 기본으로 가진 마진을 없앤다 */
+
+main {
+  width: 1140px;
+  margin: auto;
+}
+
+header {
+  height: 200px;
+  display: flex;
+}
+
+header>section:nth-of-type(1),
+header>section:nth-of-type(3) {
+  flex-basis: 15%;
+}
+
+header>section:nth-of-type(2) {
+  flex-basis: 70%;
+  /* 검색어 버튼이 있는 전체 영역 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+header>section:nth-of-type(1) {
+  /* 이미지에 대한 정렬 이야기 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#home-logo {
+  width: 120px;
+}
+
+.search-area {
+  width: 500px;
+  /* 검색어 필드 넓힐래 */
+}
+
+
+.search-area fieldset {
+  /* 검색어에 대한 필드 세팅 */
+  border: 2px solid #455ba8;
+  border-radius: 5px;
+  padding: 2px;
+  display: flex;
+
+  /* 여기좀 다시봐 => 오류가 아니라 처음에   /* 선을 명확히 보이게 하기 위해. 
+  마지막에 지우면 된다며 남겨놓은 부분임  */
+}
+
+#query {
+  /* 입력창 크게하기 */
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  /* 보더와 유사하지만 input태그를 마우스로 클릭했을 때 클릭했다고 표시되는 바깥 선 */
+  flex-basis: 92%;
+
+}
+
+
+#search-btn {
+  flex-basis: 0%;
+  cursor: pointer;
+  font-size: 20px;
+  color: #455ba8;
+  /* 아이콘은 폰트의 일종 */
+  border: none;
+  background-color: transparent;
+
+}
+
+nav {
+  height: 50px;
+  border-bottom: 2px solid black;
+
+  position: sticky;
+
+  /* 특정 스크롤 위치에 도달했을 때 요소는 특정 위치에 고정됨 
+  => 특정점에 도달할 때 어느 위치에 부착할지 정해줌 */
+
+  top: 0;
+  background-color: white;
+
+}
+
+
+nav>ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height: 100%;
+}
+
+nav li {
+  flex-basis: 150px;
+  /* 각 영역이 행안에서 150씩 차지해라 */
+
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  height: 100%;
+  display: block;
+  /* 블록영역으로 보이게 하라 */
+
+  text-align: center;
+  /* 가로정렬 */
+  line-height: 50px;
+  /* 세로정렬 */
+  transition-duration: 0.2s;
+  /* 버튼 호버링 시 천천히 바뀌어라 */
+
+  border-radius: 5px;
+  /* 모서리를 둥글게 */
+
+
+}
+
+nav a:hover {
+  background-color: #455ba8;
+  color: white;
+
+}
+
+.content {
+  display: flex;
+}
+
+.content-1 {
+  flex-basis: 70%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin-top: 20px;
+}
+
+.content-2 {
+  flex-basis: 30%;
+}
+
+
+/* content의 하위항목 */
+.content-item {
+  width: 90%;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.content-item>div {
+  width: 100%;
+  height: 200px;
+}
+
+
+
+.content-item img {
+  /* contenet-item의 자식이 div이고 div의 자식이 이 img임 */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* width와 height에 대해서 정해진 틀에 딱 맞춰서  넣어야할 때 쓰며 
+  부모의 크기에 맞춰 위아래가 잘리면서 넣어짐 
+  
+  이미지가 부모태그인 div에 맞춰지면서 비율을 유지하고 넘치는 부분은 잘린다
+  +
+  이미지가 자동으로 기운데 정렬까지 됨
+  +항상 img가 있으면 div로 감싸서 해당 div에 대해 width와 height를 정하고
+  그 부모의 크기에 맞춰 object-fit을 이용해 자동정렬하는 것이다.
+  */
+
+}
+
+.content-item a{
+  text-decoration: none;
+
+  color: black;
+
+}
+
+.content-item p {
+  display: -webkit-box;
+  /* 반드시 다음 셋과 세트로 써야 함 => 총 4개 */
+  -webkit-line-clamp: 3;
+  /* 최대 세 줄까지만 표현하고 넘치면 자를게 */
+  -webkit-box-orient: vertical;
+  /* 텍스트를 수직방향으로 정렬한다 */
+  overflow: hidden;
+ 
+  /* 똑같이 content-item의 후손인 p라고 해도 짧으면 아무 효과 X */
+
+}
+
+form[name='login-form']{
+  height: 130px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+#id-pw-area {
+  flex-basis: 70%;
+  display: flex;
+  /* 크게는 가로로 정렬되며 아이디와 비번이 세로로 작은 영역 안에 오는 것이므로 컬럼은 X */
+
+  margin: 0;
+  padding: 0;
+  border: 1px solid #ddd;
+}
+
+#id-pw-area > section:first-child {
+  /* section중 input만 있는 영역 */
+  flex-basis: 75%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+#id-pw-area > section:last-child{
+  /* section중 input이 없는 영역 */
+  flex-basis: 25%;
+}
+
+#id-pw-area input{
+  padding:5px;
+  flex-basis :50%;
+  outline: none;
+  border: none;
+  border-right: 1px solid #ddd;
+
+}
+
+
+#id-pw-area input:first-child{
+  border-bottom: 1px solid #ddd;
+}
+
+#id-pw-area input:focus{
+  border: 2px solid #455ba8
+}
+
+
+#id-pw-area button{
+  width: 100%;
+  height: 100%;
+  border:none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+
+#id-pw-area button:hover{
+  background-color: #455ba8;
+  color: white;
+}
+
+
+form[name='login-form'] > label{
+  flex-basis: 30%;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+
+#signup-find-area{
+  margin-left: 10px;
+
+}
+
+
+#signup-find-area > a{
+  color:black;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+
+#signup-find-area > span {
+  padding: 0 10px;
+  /* 앞은 상하 뒤는 좌우 */
+}
+
+footer{
+  height: 200px;
+  background-color: #a3add342;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer > p{
+  font-weight: bold;
+}
+
+footer > section > * {
+  font-size: 14px;
+}
+
+footer > a {
+  color: black;
+  text-decoration: none;
+}
+
+footer span{
+  padding: 0 10px;
+}
+
+
+/* 반응형 css를 위해, 
+즉 사용자에 따라 적절한 화면을 보여주기 위해 미디어쿼리라는 것을 쓴다 */
+
+
+
+
+@media all and (max-width: 767px){
+  main{
+    width: 100vw;
+    /* 현재 뷰포트, 즉 브라우저 창에 대해 전부 꽉 차게 차지할래 */
+
+  }
+
+  header{
+    display: none;
+  }
+
+  nav{
+    width: 100%;
+    border-bottom: none;
+    height: auto;
+  }
+
+  nav > ul {
+    flex-direction: column;
+  }
+
+  nav li {
+    flex-basis: auto;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .content-2 {
+    padding: 20px;
+  }
+
+  footer{
+    width: 100vw;
+  }
+
+  footer p, footer > section > * {
+    font-size: 12px;
+  }
+
+}
+
+/* 골뱅이의 뜻: 미디어 쿼리를 선언하는 키워드로 특정조건, 
+즉 화면크기에 따라 css스타일을 적용할 때 사용
+
+all의 뜻?
+
+모든 미디어 유형에 적용 (생략 가능)
+하지만 주로 all자리에 대신 screen을 씀
+
+max-width: 767px의 뜻? 
+
+화면의 너비가 767픽셀 이하일 때 이러한 스타일을 적용한다는 의미
+주로 767은 스마트폰이나 작은 테블릿에서 적용. 
+
+즉 모바일에서 위와같은 반응형을 사용하겠다고 선언한 것
+
+모바일은 767px 테블릿의 기준은  */
+
+
+@media all and (min-width: 768px ) and (max-width: 1023px) {
+  
+}
+
+/* 화면의 너비가 768픽셀 이상, 1023픽셀 이하일 때  */
+
+@media (min-width:1024px){
+
+}
+
+/* 화면의 너비가 1024픽셀 이상일 때  */
