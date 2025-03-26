@@ -103,7 +103,6 @@ header > section:nth-of-type(2) > a {
   position: sticky;
   top: 0;
   background-color: white;
-  flex-shrink: 0;
 }
 .sidebar-header {
   display: flex;
@@ -144,42 +143,66 @@ header > section:nth-of-type(2) > a {
 main {
   flex-grow: 1;
   padding: 20px;
+  
 }
 
-.grid-layout {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: repeat(7, auto);
+/* main 내부를 두 열로 나눔 */
+.main-inner {
+  display: flex;
+  gap: 20px;
+}
+
+/* 왼쪽 열 */
+.left-column {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
   gap: 10px;
-  padding: 20px;
 }
 
-/* 왼쪽 열: 1~7번째 요소 */
-.grid-layout section:nth-child(1),
-.grid-layout section:nth-child(2),
-.grid-layout section:nth-child(3),
-.grid-layout section:nth-child(4),
-.grid-layout section:nth-child(5),
-.grid-layout section:nth-child(6),
-.grid-layout section:nth-child(7) {
-  grid-column: 1;
+.left-column div {
+  border: 1px solid #ccc;
   padding: 10px;
-  border: 1px solid #ccc;
+  background-color: #f9f9f9;
 }
 
-/* 오른쪽 열: 8, 9번째 요소 */
-.grid-layout section.right-cell:nth-of-type(8) {
-  grid-column: 2;
-  grid-row: 1;
-  background-color: #eee;
-  padding: 20px;
-  border: 1px solid #ccc;
+/* 오른쪽 열 */
+.right-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.grid-layout section.right-cell:nth-of-type(9) {
-  grid-column: 2;
-  grid-row: 2;
-  background-color: #eee;
-  padding: 20px;
+.right-column div {
   border: 1px solid #ccc;
+  padding: 20px;
+  background-color: #eee;
+}
+
+*:focus {
+  outline: none;
+}
+
+
+.copilot-wrapper {
+  display: flex;
+  flex-direction: column; 
+  gap: 10px;               /* 각 요소 사이 여백 */
+  padding: 15px;
+  border: 1px solid #ccc;
+
+}
+
+.copilot-input {
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  background-color: white;
+}
+
+.copilot-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap; /* 버튼들이 너무 많으면 줄 바꿈 */
 }

@@ -1,24 +1,92 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>00_포트폴리오</title>
   <link rel="stylesheet" href="css/00_포트폴리오.css" />
   <!-- 필요한 폰트 아이콘 링크들 -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=open_in_new_down" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=face" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
+
 <body>
-  <!-- 🔷 헤더 -->
+
   <header>
-    <section><span class="material-symbols-outlined">menu</span></section>
+    <!-- 기존 header 그대로 -->
+    <section>
+      <span class="material-symbols-outlined">menu</span>
+    </section>
     <section>
       <a href="#">
-        <img src="../images/gitlogo.jpg" id="home-logo" />
         <h2>Dashboard</h2>
       </a>
     </section>
+
     <section class="right-group">
-      <!-- 검색창/드롭다운/아이콘 생략 -->
+      <section class="search-area">
+        <form action="#" name="search-form">
+          <fieldset>
+            <input type="search" id="query" name="query" autocomplete="off" placeholder="type [ / ] to search.">
+            <button id="search-btn" class="fa-solid fa-magnifying-glass"></button>
+          </fieldset>
+        </form>
+      </section>
+
+      <section class="select-wrapper">
+        <span class="material-symbols-outlined">face</span>
+        <select id="menu">
+          <option value="1" disabled selected hidden></option>
+          <option value="2">assistive</option>
+          <option value="3">immersive</option>
+          <option value="4">download for</option>
+          <option value="5">settings</option>
+        </select>
+      </section>
+      <span> | </span>
+
+      <section class="select-wrapper">
+        <span class="material-symbols-outlined">add</span>
+        <select id="menu">
+          <option value="1" disabled selected hidden></option>
+          <option value="2">New repository</option>
+          <option value="3">insert repository</option>
+          <option value="4">New codespace</option>
+          <option value="5">new gist</option>
+          <option value="6">new organization</option>
+          <option value="7">new project</option>
+        </select>
+      </section>
+
+      <section>
+        <span class="material-symbols-outlined">
+          <a href="#">radio_button_checked</a>
+        </span>
+      </section>
+
+      <section>
+        <span class="material-symbols-outlined">
+          <a href="#">conversion_path</a>
+        </span>
+      </section>
+
+      <section>
+        <span class="material-symbols-outlined">
+          <a href="#">mail</a>
+        </span>
+      </section>
+
+      <section>
+        <span class="material-symbols-outlined">
+          <a href="#">power</a>
+        </span>
+      </section>
     </section>
   </header>
 
@@ -48,31 +116,43 @@
 
     <!-- 🔹 가운데 main (2열 7행 그리드) -->
     <main>
-      <div class="grid-layout">
-        <!-- 왼쪽 열: 1~7행 -->
-        <section>ask-copilot영역</section>
-        <section>빠른 접근</section>
-        <section>튜토리얼 카드</section>
-        <section>README</section>
-        <section>도구 모음</section>
-        <section>시작하기</section>
-        <section>트렌딩</section>
-       <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-       <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-       <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-       <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-       <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-       <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-       <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-       <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-       <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <!-- 오른쪽 열: 1행과 2행 -->
-        <section class="right-cell">최종영역1</section>
-        <section class="right-cell">최종영역2</section>
+      <div class="main-inner">
+
+        <!-- 왼쪽 열: 6개의 섹션 -->
+        <section class="left-column">
+          <div class="copilot-wrapper">ask-copilot영역
+            <div class="copilot-input">Ask Copilot 입력창</div>
+            <div class="copilot-tags">버튼 모음 (예: Show directory exists 등)</div>
+
+
+          </div>
+
+
+
+
+
+          <div>Home</div>
+          <div>Start Writing code</div>
+          <div>Use tools of the trade</div>
+          <div>Get started on GitHub</div>
+          <div>Tranding</div>
+        </section>
+
+        <!-- 오른쪽 열: 2개의 섹션 -->
+        <section class="right-column">
+          <div>lastest change</div>
+          <div>explpre repository</div>
+        </section>
+
       </div>
+
+      <div style="height: 2000px;"></div>
+
     </main>
   </div>
 
   <footer></footer>
+
 </body>
+
 </html>
