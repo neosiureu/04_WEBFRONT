@@ -94,17 +94,17 @@ header > section:nth-of-type(2) > a {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  height: calc(100vh - 60px); /* 헤더 높이 제외 */
 }
 
 .sidebar {
   width: 260px;
   padding: 12px;
-  height: 100%;
+  height: 100vh;
+  position: sticky;
+  top: 0;
   background-color: white;
-  border-right: 1px solid #ddd;
+  flex-shrink: 0;
 }
-
 .sidebar-header {
   display: flex;
   flex-direction: column;
@@ -144,7 +144,6 @@ header > section:nth-of-type(2) > a {
 main {
   flex-grow: 1;
   padding: 20px;
-  overflow-y: auto;
 }
 
 .grid-layout {
