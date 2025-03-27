@@ -2,6 +2,7 @@
 <html lang="ko">
 
 <head>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>00_포트폴리오</title>
@@ -9,7 +10,8 @@
   <!-- 필요한 폰트 아이콘 링크들 -->
 
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=account_tree" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=account_tree" />
 
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=school" />
@@ -39,6 +41,10 @@
       </a>
     </section>
 
+    <div>
+      <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" class="header-logo"
+        alt="GitHub Logo">
+    </div>
     <section>
       <a href="#">
         <h2>Dashboard</h2>
@@ -49,7 +55,10 @@
       <section class="search-area">
         <form action="#" name="search-form">
           <fieldset>
-            <input type="search" id="query" name="query" autocomplete="off" placeholder="type [ / ] to search.">
+            <span class="material-symbols-outlined">
+              search
+              </span>
+            <input type="search" id="query" name="query" autocomplete="off" placeholder="Type [ / ] to search.">
             <button id="search-btn" class="fa-solid fa-magnifying-glass"></button>
           </fieldset>
         </form>
@@ -115,7 +124,7 @@
     <nav class="sidebar">
       <section class="sidebar-header">
         <section class="top-nav">
-          <span>Top repository</span>
+          <span><strong>Top repository</strong></span>
           <section class="new-btn-wrapper">
             <button class="new-button">🖥️New</button>
           </section>
@@ -163,9 +172,12 @@
             <div class="home-filter">
               <div class="home"> HOME </div>
               <section>
+                <button class = "filterbutton">
                 <a href="#">
                   <span class="material-symbols-outlined">menu</span>
-                  <div class="filter"> Filter </div>
+                 
+                    <div class="filter"> Filter </div>
+                  </button>
                 </a>
               </section>
 
@@ -175,7 +187,7 @@
             <div class="learn-removeFromDashBoard">
               <div class="learn"> 💥Learn with a tutorial project </div>
 
-              
+
 
 
               <a href="#">
@@ -290,10 +302,9 @@
                       Create
                     </a>
                   </div>
+                  <!-- 1번부터 8번까지 소개가 있어야하는 장소 -->
                   <div class="boxdown">
-                    <!-- 1번부터 8번까지 소개가 있어야하는 장소 -->
-                    <div class="boxdown">
-                      <pre>
+                    <pre>
 1 - 👋 Hi, I’m @neosiureu  
 2 - 👀 I’m interested in ...  
 3 - 🌱 I’m currently learning ...  
@@ -303,8 +314,8 @@
 7 - ⚡ Fun fact: ...
 8-
                       </pre>
-                    </div>
                   </div>
+
                 </div>
               </div>
             </section>
@@ -322,7 +333,8 @@
               <h3>Use tools of the trade</h3>
               <a href="#">
                 <div class="removeFromDashBoard"> ... </div>
-              </a>            </div>
+              </a>
+            </div>
 
             <div class="tools-cards">
               <div class="tool-card">
@@ -354,25 +366,30 @@
               <h3>Get started on GitHub</h3>
               <a href="#">
                 <div class="removeFromDashBoard"> ... </div>
-              </a>            </div>
+              </a>
+            </div>
 
 
             <div class="getStart-cards">
               <div class="getStart-card">
-                <img src="images/flowers/flower1.jpg" alt="cut">
+                <iframe width=100% height=100% src="https://www.youtube.com/embed/pBy1zgt0XPc" title="YouTube video"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
               </div>
               <div class="getStart-card">
                 <span class="material-symbols-outlined">
                   account_tree
-                  </span>
+                </span>
                 <h3><strong>Follow this exercise to try the GitHub flow</strong></h3>
                 <p>
                   GitHub’s “Hello World” tutorial teaches you essentials,<br>
                   where you create your own repository and learn GitHub's pull request workflow<br>
                   for creating and reviewing code.
                 </p>
-              
-                
+
+
                 <br>
                 <button class="getStart-btn">🧪 Try the GitHub flow</button>
               </div>
@@ -385,8 +402,9 @@
               <a href="#">See more</a>
               <a href="#">
                 <div class="removeFromDashBoard"> ... </div>
-              </a>               </div>
-          
+              </a>
+            </div>
+
             <div class="trend-item">
               <div class="trend-main">
                 <div class="repo-title"><strong>microsoft/playwright-mcp</strong></div>
@@ -398,7 +416,7 @@
               </div>
               <button class="star-btn">☆ Star ▼</button>
             </div>
-          
+
             <div class="trend-item">
               <div class="trend-main">
                 <div class="repo-title"><strong>microsoft/ai-agents-for-beginners</strong></div>
@@ -417,9 +435,86 @@
 
         <!-- 오른쪽 열: 2개의 섹션 -->
         <section class="right-column">
-          <div>lastest change</div>
-          <div>explpre repository</div>
-        </section>
+          <div class="latest-changes-card">
+            <h2>Latest changes</h2>
+            <ul class="change-list">
+              <li>
+                <span class="dot"></span>
+                <div class="yesterday">
+                  <div class="date">Yesterday</div>
+                  <div class="desc">Transitive dependencies are now available for Maven</div>
+                </div>
+              </li>
+              <li>
+                <span class="dot"></span>
+                <div>
+                  <div class="date">3 days ago</div>
+                  <div class="desc">Enterprise custom properties, enterprise rulesets, and pull request merge method rule...</div>
+                </div>
+              </li>
+              <li>
+                <span class="dot"></span>
+                <div>
+                  <div class="date">Last week</div>
+                  <div class="desc">Create, add, and remove sub-issues on GitHub Mobile</div>
+                </div>
+              </li>
+              <li>
+                <span class="dot"></span>
+                <div>
+                  <div class="date">Last week</div>
+                  <div class="desc">Enhance your productivity with Copilot Edits in JetBrains IDEs</div>
+                </div>
+              </li>
+            </ul>
+            <a href="#" class="changelog-link">View changelog →</a>
+          </div>
+        
+          <div class="explore-repos-card">
+            <h3>Explore repositories</h3>
+          
+            <div class="repo-item">
+              <div class="repo-header">
+                <a href="#"><strong>swagger-api / swagger-ui</strong></a>
+                <button class="star-btn">☆</button>
+              </div>
+              <p>Swagger UI is a collection of HTML, JavaScript, and CSS assets that dynamically generate beautiful documentation from a Swagger-compliant API.</p>
+              <div class="repo-footer">
+                <span>☆ 27.1k</span>
+                <span class="lang-indicator yellow"></span> JavaScript
+              </div>
+            </div>
+          
+            <hr>
+          
+            <div class="repo-item">
+              <div class="repo-header">
+                <a href="#"><strong>rescript-lang / rescript</strong></a>
+                <button class="star-btn">☆</button>
+              </div>
+              <p>ReScript is a robustly typed language that compiles to efficient and human-readable JavaScript.</p>
+              <div class="repo-footer">
+                <span>☆ 7k</span>
+                <span class="lang-indicator red"></span> ReScript
+              </div>
+            </div>
+          
+            <hr>
+          
+            <div class="repo-item">
+              <div class="repo-header">
+                <a href="#"><strong>keycloak / keycloak</strong></a>
+                <button class="star-btn">☆</button>
+              </div>
+              <p>Open Source Identity and Access Management For Modern Applications and Services</p>
+              <div class="repo-footer">
+                <span>☆ 26.2k</span>
+                <span class="lang-indicator brown"></span> Java
+              </div>
+            </div>
+          
+            <a href="#" class="explore-more">Explore more →</a>
+          </div>        </section>
 
 
       </div>
@@ -430,7 +525,8 @@
   </div>
   <footer class="footer">
     <div class="footer-left">
-      <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" class="footer-logo" alt="GitHub Logo">
+      <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" class="footer-logo"
+        alt="GitHub Logo">
       <span>© 2025 GitHub, Inc.</span>
     </div>
     <div class="footer-right">
@@ -450,8 +546,8 @@
       </div>
     </div>
   </footer>
-  
-  
+
+
 
 </body>
 
