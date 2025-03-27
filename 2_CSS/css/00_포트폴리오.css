@@ -238,6 +238,7 @@ main {
   padding: 0;
 }
 
+
 /* 오른쪽 열 */
 .right-column {
   min-width: 500px;
@@ -338,20 +339,25 @@ main {
 .grid-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 6px;
   margin-bottom: 20px; 
+  justify-content: space-between;
 
 }
 
 .grid-buttons > div {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
+  margin: 0;
+    
   
 }
 
 .grid-buttons > div > div {
-  width: 400px;            
+  width: 100%;          
+  max-width: 420px;      
+  flex: 1;              
   min-height: 120px;         
   background-color: #f9f9f9;
   border: 1px solid #ccc;
@@ -360,17 +366,24 @@ main {
   box-sizing: border-box;
   font-size: 24px;
   line-height: 1.5;
-  padding: 20px 20px 50px 20px; 
+  padding: 20px 20px 10px 20px; 
  
 
 }
 
 .grid-buttons .buttonTitle {
-  font-size: 30px;
+  font-size: 20px;
   font-weight: bold;
   color: blue;
-  margin-bottom: 8px
+  margin-bottom: 3px
 }
+
+.grid-buttons > div > div {
+  font-size: 15px;
+
+
+}
+
 
 .seemore{
   font-size: 20px;
@@ -475,6 +488,10 @@ main {
   font-size: 16px;
 }
 
+.boxdown > pre {
+  border: 0px;
+}
+
 .created {
   display: inline-block;
   background-color: #2ea44f;
@@ -556,4 +573,222 @@ main {
 
 .tool-card a:hover {
   text-decoration: underline;
+}
+
+
+
+
+
+.getStart-Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+
+
+
+.getStart-cards {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap; /* 화면 줄어들면 세로로 배치 */
+  justify-content: space-between;
+}
+
+.getStart-card {
+  width: 440px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
+
+.getStart-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+
+.tool-card h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.getStart-card p {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.6;      
+  max-width: 360px;     
+}
+
+.getStart-card a {
+  color: #0969da;
+  text-decoration: none;
+}
+
+.getStart-card a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+.getStart-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+.getStart-btn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  background-color: #f6f8fa;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.getStart-btn:hover {
+  background-color: #eaecef;
+}
+
+.getStart-cards > .getStart-card > p {
+font-size: 18px;
+
+}
+
+
+.trend-wrapper {
+  width: 1000px; /* getStart-card와 맞춤 */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: white;
+  margin-top: 24px;
+}
+
+.trend-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.trend-more {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.trend-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 12px 0;
+  border-top: 1px solid #eee;
+}
+
+.repo-title {
+  font-weight: bold;
+}
+
+.repo-desc {
+  color: #555;
+  margin: 4px 0;
+}
+
+.repo-info {
+  font-size: 14px;
+  color: #777;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.blue { background-color: #0366d6; }
+.orange { background-color: #d73a49; }
+
+.star-btn {
+  border: 1px solid #ccc;
+  background-color: #f6f8fa;
+  border-radius: 6px;
+  padding: 4px 12px;
+  cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  padding: 24px 40px;
+  border-top: 1px solid #d8dee4;
+  background-color: white;
+  font-size: 12px;
+  color: #6e7781;
+  justify-content: flex-start;      
+  gap: 100px;                      
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 600px;
+  font-size: 20px;
+  margin-bottom: 12px; 
+}
+
+.footer-logo {
+  width: 16px;
+  height: 16px;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  font-size: 20px;
+  margin-bottom: 12px; 
+
+}
+
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.top-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.bottom-link a {
+  white-space: nowrap;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #0969da;
+  white-space: nowrap;
+}
+
+
+.bottom-link{
+  margin-left: 120px;
+  font-size: 17px;
+
 }
