@@ -98,7 +98,6 @@ header>section:nth-of-type(2)>a {
   display: inline-block;
   white-space: nowrap;
   direction: ltr;
-  -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
 }
 
@@ -215,7 +214,7 @@ header>section:nth-of-type(2)>a {
 }
 
 .sidebar-header ul li {
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
 }
 
 .sidebar-header>section:nth-of-type(2) input {
@@ -229,10 +228,10 @@ header>section:nth-of-type(2)>a {
 }
 
 .sidebar-header input[type="text"] {
-  margin-top: 12px;   
-  margin-bottom: 16px; 
-  padding: 6px 10px;  
-  height: 30px;       
+  margin-top: 12px;
+  margin-bottom: 16px;
+  padding: 6px 10px;
+  height: 30px;
   font-size: 20px !important;
 }
 
@@ -293,10 +292,10 @@ main {
 
 .change-list li,
 .change-list li div,
-.latest-changes-card
- {
+.latest-changes-card {
   background-color: white !important;
 }
+
 .copilot-wrapper {
   display: flex;
   flex-direction: column;
@@ -870,7 +869,7 @@ main {
 
 
 .explore-repos-card {
-  width: 450px; 
+  width: 450px;
   padding: 16px;
   background-color: white !important;
   border: 1px solid white;
@@ -937,9 +936,11 @@ main {
 .lang-indicator.yellow {
   background-color: gold;
 }
+
 .lang-indicator.red {
   background-color: red;
 }
+
 .lang-indicator.brown {
   background-color: #8B4513;
 }
