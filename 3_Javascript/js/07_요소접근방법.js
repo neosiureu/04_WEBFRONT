@@ -193,6 +193,7 @@ document.querySelector('#user-input')
 
 
 
+
 /*>keyup 
 
 버튼이면 click, 키보드이면 keyup keydown 등 eventListener는 다양
