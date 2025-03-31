@@ -29,7 +29,6 @@ function check1(){
   // 따라서 ===또는 !==를 써서 완전 같은지 다른지를 비교할 수 있다/
 
 
-
   while (input !== null) {
     // 취소를 누르기 전까지 계속 반복
     input = prompt("메뉴번호를 입력하세요:");
@@ -48,7 +47,6 @@ function check1(){
     let sum = (gCount * gimbap) + (rCount * ramen) + (dCount * donkkaseu);
 
     alert(`총가격: ${sum}원`);
-
   }
 
 }
