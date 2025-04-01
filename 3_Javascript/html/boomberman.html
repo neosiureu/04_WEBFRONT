@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>boomberman</title>
+
+  <style>
+    #box {
+      width: 500px;
+      height: 500px;
+      border: 2px solid black;
+      overflow: hidden;
+    }
+
+    img{
+      width: 50px;
+    }
+
+    #bomb{
+      visibility: hidden;
+
+    }
+  </style>
+</head>
+<body>
+  <h1>봄버맨!</h1>
+  <ul>
+    <li>방향키로 이동: 누르고 있는 동안에 계속 쭉 이동되어야 한다</li>
+    <li>X키를 누를 때 마다 바로 폭탄이 생성</li>
+    <li>z키를 누르면 이미지를 변경하여 터진 폭탄으로 변경</li>
+  </ul>
+
+  <div id="box">
+    <img src="../../images/bomberman.png" id="boomberman">
+    <img src="../../images/bomb.png" id="bomb">
+
+  </div>
+
+  <script src="../js/boomberman.js"></script>
+</body>
+</html>

@@ -41,33 +41,33 @@ function check1(btn) {
 
 
 
-// // 고전 이벤트 모델 제거
-// // 아이디가 test1-2버튼 클릭 시 test1-1의 onclick이벤트리스너의 이벤트핸들러 제거
+// 고전 이벤트 모델 제거
+// 아이디가 test1-2버튼 클릭 시 test1-1의 onclick이벤트리스너의 이벤트핸들러 제거
 
-// document.querySelector('#test1-2').onclick = function () {
-//   // 기존 onclick의 이벤트핸들러, 즉 함수를 null로 덮어 씌움
-//   test1a.onclick = null;
-//   alert('이벤트 제거 됨');
-// }
+document.querySelector('#test1-2').onclick = function () {
+  // 기존 onclick의 이벤트핸들러, 즉 함수를 null로 덮어 씌움
+  test1a.onclick = null;
+  alert('이벤트 제거 됨');
+}
 
-// // #test1-3요소를 얻어와 test1c라는 변수에 저장한다
-// const test1c = document.querySelector('#test1-3');
+// #test1-3요소를 얻어와 test1c라는 변수에 저장한다
+const test1c = document.querySelector('#test1-3');
 
-// //  #test1-3요소가 클릭될 시 배경색을 빨강으로
+//  #test1-3요소가 클릭될 시 배경색을 빨강으로
 
-// test1c.onclick = function(){
-//   test1c.style.backgroundColor = "red";
-// }
-
-
-// // 나중에
-
-// test1c.onclick = function(){  test1c.style.color = "white" }
+test1c.onclick = function(){
+  test1c.style.backgroundColor = "red";
+}
 
 
+// 나중에 이렇게 잘못 작성하면 원치 않는 동작
+
+test1c.onclick = function(){  test1c.style.color = "white" }
 
 
-// const test2 = document.querySelector('#test2');
+
+
+const test2 = document.querySelector('#test2');
 
 
 
@@ -140,19 +140,18 @@ input3.addEventListener('keyup', function(e){
    box3.style.backgroundColor = input3.value;
    // value와 inenrText의 차이
 
-   // placeholder는 글자가 아니니까 
-   // 태그 사이에 껴있는 것이 아닌 셈
-
+   // placeholder는 글자가 아니니까 태그 사이에 껴있는 것이 아니니 value가 맞음
   }
 });
-
 
 
 
 box3.addEventListener("click", function(e){
   // e.target : 이벤트가 발생한 요소, 즉 this의 다른말
   alert(`배경색: ${e.target.style.backgroundColor}`);
-})
+});
+
+
 
 
 

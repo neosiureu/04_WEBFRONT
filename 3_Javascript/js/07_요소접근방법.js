@@ -45,9 +45,6 @@ function nameTest() {
   let str = ' ';
   let cnt = 0;
 
-
-
-
   for (let i = 0; i < hobbyList.length; i++) {
     // checkbox와 radio의 전용 속성 => .checked 메서드
     // 요소가 체크 되어 있다면 true 또는 false를 반환하는 메서드
@@ -186,9 +183,6 @@ document.querySelector('#user-input')
     // 엔터가 눌러지고 떼어졌을 때
     readValue();
   }
-  
-
-
 });
 
 
