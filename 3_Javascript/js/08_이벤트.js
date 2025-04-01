@@ -89,68 +89,68 @@ const test2 = document.querySelector('#test2');
 // 요소. addEvenetLister (이벤트의 종류를 str로 , handler 즉 함수 )
 
 
-test2. addEventListener("click", function(){
-  // 투명도는 1에 가까울수록 불투명. 0에 가까울수록 투명.
-  
-  // 0.1씩 감소
+/*
+✅ 문제 1-1. #test2 요소를 클릭할 때마다 투명도를 0.1씩 낮추고, 0이 되면 다시 1로 초기화하라
+대상 요소:
 
-  // 현재 test2요소의 투명도를 확인
+<div id="test2">클릭</div>
+요구 사항:
 
-  let curr
-   = test2.style.opacity;
+사용자가 이 녹색 상자를 클릭할 때마다 투명도(opacity)를 0.1씩 낮춰라.
+투명도는 style.opacity로 조작할 수 있다.
+맨 처음 클릭 시 투명도는 "" (빈 문자열)이므로 1로 간주하고 시작한다.
+투명도가 0이 되면 다시 1로 초기화되어야 한다 (반복적으로 깜빡이듯 동작).
+✅ 문제 1-2. #test2 요소를 클릭할 때마다 클릭 횟수를 표시하라
+대상 요소:
+동일한 #test2 요소
 
-   // 맨처음에는 투명도가 빈 문자열과 같이 나온다
+요구 사항:
+
+이 요소를 클릭할 때마다 내부 텍스트(innerText)에 클릭 횟수를 숫자로 표시하라.
+예: 처음 클릭하면 "1", 두 번째 클릭하면 "2"...
+이 기능은 위의 투명도 조절 기능과 같은 요소에 동시에 적용되어야 한다.
+즉, 하나의 요소에 두 개의 이벤트 리스너를 추가해야 한다 (표준 이벤트 모델 활용).
+
+*/ 
+
+const tester = document.querySelector('#test2');
+
+
+tester.style.opacity=1
+let curr= tester.style.opacity;
+
+tester.addEventListener("click",function(e){
    console.log(curr);
+   tester.style.opacity = curr;
+   curr-=0.1;
 
-   // 빈문자열이 나옴 => 1이어야 함
-
-    if (curr==''){
-      test2.style.opacity =1;
-      curr = 1;
-    } // 일종의 초기화 과정
-  
-    test2.style.opacity = curr - 0.1;
-
-    if(test2.style.opacity == 0){
-      test2.style.opacity = 1;
-
-    }
-})
-
-let count= 0;
-test2.addEventListener("click",function(){
-  count++; 
-  // 표준 이벤트 모델의 이벤트 핸들러 내부에서의 this
-  // 여기서 this 역시 이벤트가 발생한 요소인 test2라는 말
-
-
-  this.innerText = count;
+   if(curr<=0){
+    tester.style.opacity=1;
+    curr=1;
+   }
 
 })
 
 
+let cnt =0;
+tester.addEventListener("click",function(e){
+  tester.innerHTML = cnt++; 
+}
+)
 
 
-const input3 = document.getElementById("input3")
-const box3=document.getElementById("box3")
 
-input3.addEventListener('keyup', function(e){  
-  if(e.key == 'Enter'){
-    // 엔터가 눌러지고 떼어졌을 때
-   box3.style.backgroundColor = input3.value;
-   // value와 inenrText의 차이
 
-   // placeholder는 글자가 아니니까 태그 사이에 껴있는 것이 아니니 value가 맞음
+const input3 = document.querySelector('#input3');
+const box3 = document.querySelector('#box3');
+
+input3.addEventListener("keyup",function(e){
+  console.log(e);
+  if(e.key=='Enter'){
+    box3.style.backgroundColor = input3.value;
   }
-});
 
-
-
-box3.addEventListener("click", function(e){
-  // e.target : 이벤트가 발생한 요소, 즉 this의 다른말
-  alert(`배경색: ${e.target.style.backgroundColor}`);
-});
-
+})
 
 
 

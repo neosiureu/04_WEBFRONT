@@ -13,10 +13,30 @@
 
 function bombCreate(){
   const man = document.querySelector("#boomberman");
-  bomb.style.visibility = "visible";
-  
-  bomb.style.transform = man.style.transform;
+  const bomb = document.querySelector(".bomb");
 
+  // bomb.style.visibility = "visible";
+  const now= man.style.transform;
+  
+  document.getElementById("box").innerHTML
+  +=`<img src="../../images/bomb.png" class="bomb" >`;
+
+  const bombs = document.querySelectorAll('.bomb');
+  const newboms = bombs[bombs.length-1]
+
+  newboms.style.transform = now;
+  newboms.style.visibility = "visible";
+
+}
+
+function bombing(){
+  const bomb = document.querySelector(".bomb");
+  let bombList = document.querySelectorAll('.bomb');
+  console.log(bomb.length-1);
+  for(let i=0; i<bombList.length; i++){
+    bombList[i].className='boomm';
+    bombList[i].src="../../images/boomm.png";
+  }
 }
 
 
@@ -37,6 +57,8 @@ document.addEventListener('keydown', function (e) {
     case 'ArrowUp': idx=3; break;
     case 'x': 
     case 'X': idx=4; break;
+    case 'z': 
+    case 'Z': idx=5; break;
     default:  return;
   }
 
@@ -60,7 +82,9 @@ document.addEventListener('keydown', function (e) {
     bombCreate();
   }
 
-  
+  if(idx===5){
+    bombing();
+  }
 
 }
 
