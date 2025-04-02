@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  width: 80%;
+  height: 300px;
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  /* align-content는 이는 여기서 처음 배우는 개념인데 flexbox의 일종으로 flexwarp과 함께 사용
+  정렬을 여러 줄로 배치할 때 
+  중심축의 처음, 마지막, 중간 지점 중 어떤 지점에서 할지 정하는 명령어 */
+  overflow: auto;
+}
+
+.box{
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: palegreen;
+}
+
+.box > input {
+  width: 100%;
+}

@@ -1,69 +1,16 @@
-let xIndex =0; //x좌표 방향대로 얼마만큼 이동했는지저장
-let yIndex =0; //y좌표 방향대로 얼마만큼 이동했는지저장
-
-/*다만 사람,폭탄등의 이미지는 전역으로 설정하면 DOM이 무너져서 안됨 */
-
-
-
-document.addEventListener('keydown', function (e) {
-  const boomberman = document.querySelector("#boomberman");
-  const bomb = document.querySelector("#bomb");
-  console.log(e.key);
-
-  switch(e.key){
-    
-    case 'ArrowLeft': xIndex-=10;  break;
-    case 'ArrowDown': yIndex+=10; break;
-    case 'ArrowRight': xIndex+=10;  break;
-    case 'ArrowUp': yIndex-=10; break;
-    // man.style.transform += 'translate(-10px, 0px)'; 
-    // 이렇게 하지 않고 전역변수의 좌표 값을 줘서 x좌표와 y좌표를 아래에서 전달하기로 함
-    case 'x':  
-    
-    const box = document.querySelector('#box');
-
-    box.innerHTML
-    +=
-    `<img src="../../images/bomb.png" class="bomb" 
-    style="transform: translate(${xIndex}px, ${yIndex}px); 
-    position:absolute>"`
-
-    /*   document.getElementById("box").innerHTML
-  +=`<img src="../../images/bomb.png" class="bomb" >`;*/
-    break;
-    case 'z': 
-    explodeBomb();
-    
-    break;
-    default:  alert('방향키, 또는 z,x만 가능함');
-
-  }
-
-  boomberman.style.transform = `translate(${xIndex}px,${yIndex}px)`;
+// js를 통해 수많은 css를 건드려야 한다
+// 1) 키보드를 누를 때마다 해당 이미지를 움직인다. 
+// 즉 css를 통해 위치를 계속 바꾼다  (transform translate라는 css속성이 있었음)
 
 
 
-}
-)
-
-
-const explodeBomb = () => {
-  const bombs = document.querySelectorAll(".bomb");
-
-  // js에서는 for of문이 존재, 마치 for each문같은 것으로
-  // 배열같이 반복 가능한 객체의 요소를 순차적으로 순회하는 enhanced for의 일종
-
-  for(let bomb of bombs){
-    bomb.src = "../../images/boom.png";
-
-  }
-
-}
+// x는 box에 img태그를 누적하여 문자열 자체를 태그를 통해 추가해야 함
+// 그러면 이 cosnt man  = 의 함수는 더이상 유효하지 않다. 따라서 사람이 안 움직임
 
 
 
 
-/*
+
 function bombCreate(){
   const man = document.querySelector("#boomberman");
   const bomb = document.querySelector(".bomb");
@@ -144,4 +91,28 @@ document.addEventListener('keydown', function (e) {
 
 )
 
-*/
+
+// document.querySelector('#boomberman').addEventListener('keydown', (event) => {
+//   const element = document.querySelector('#boomberman');
+
+
+//   const arrowkeys  = ['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'];
+
+//   if(!arrowkeys.includes(event.key)) return;
+  
+//   if (event.target.checked === true) {
+//     element.animate(
+//       {
+//         transform: [
+//           'translateX(0px)',
+//           'translateX(300px)'
+//         ]
+//       },
+//       {
+//         duration: 500, // 밀리초 지정
+//         fill: 'forwards', // 종료 시 속성을 지님
+//         easing: 'ease' // 가속도 종류
+//       }
+//     );
+//   } 
+// });
