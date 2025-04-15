@@ -51,9 +51,21 @@ document.getElementById('exitBtn').addEventListener('click', () => {
     }
   }
 });
+const container = document.querySelector('.menu-container');
 
 
-{/* <li class="menu">
-        <span> <class class="menu-name"> 카레 돈까스</class></span>
-        <span class="menu-price">10000원</span>
-      </li> */}
+const li = document.createElement('li');
+li.classList.add('menu');
+
+const nameSpan = document.createElement('span');
+nameSpan.classList.add('menu-name');
+nameSpan.textContent = '생선가스'; 
+
+
+const priceSpan = document.createElement('span');
+priceSpan.classList.add('menu-price');
+priceSpan.textContent = '8000원'; 
+
+li.append(nameSpan, priceSpan);
+
+

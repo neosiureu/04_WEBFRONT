@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>시험문제</title>
+  <link rel="stylesheet" href="../css/00_시험.css">
+</head>
+<body>
+  <main>
+    <section class="color-area">
+      <div class="container">
+        <div class="box" ></div>
+
+
+        
+
+      
+
+        <div class="firstRow">
+         <div class="width">
+          <div style="width: 200px;">너비: </div>  <div><input type="number" class="width-input"></div> PX
+         </div> 
+         <div class="height">
+          <div style="width: 200px;">높이: </div>  <div><input type="number" class="height-input"></div> PX
+         </div>
+         </div>
+         <div class="secondRow"> 
+         <div class="height">
+          <div style="width: 200px;">글자크기: </div>  <div><input type="number" class="size"></div> PX
+         </div> 
+         <div class="width">
+          <div style="width: 200px;">굵기: </div>  <div><input type="text" class="bold"></div>
+         </div> 
+         </div>
+         <div class="thirdRow"> 
+        <div class="textContainer">
+          <div style="width: 200px;">글자색: </div>  <div><input type="text" class="text-input"></div> 
+         </div> 
+       <div class="backgroundContainer">
+       <div style="width: 200px;">배경색: </div>  <div><input type="text" class="color-input"></div> 
+        <!-- <div style="height: 1000px; width: 300px;" class="box" ></div> -->
+      </div> 
+      </div>
+      <div class="fourthRow"> 
+      <div style="width: 200px;"> </div> 가로정렬: &nbsp; <div>  왼쪽: <input type="radio" name="left"> 가운데: <input type="radio" name="mid"> 오른쪽: <input type="radio" name="right"> 
+      <!-- <div style="height: 1000px; width: 300px;" class="box" ></div> -->
+    </div> 
+    <div style="width: 200px;">세로정렬: &nbsp;  </div>  <div><input type="text" class="align"></div>  위: <input type="radio" name="up"> 가운데: <input type="radio" name="heightMid"> 아래: <input type="radio" name="down"> 
+  </div> 
+  </div>
+      <div class="text">
+        <div style="width: 200px;">출력문자열: </div>  <div><input type="text" class="text-origin"></div> 
+       </div> 
+
+
+      </div>
+    </section>
+
+
+    <div>
+    <button id="changeButton">적용하기</button>
+  </div>
+  </main>
+
+  <script src="../js/00_시험.js" ></script>
+</body>
+</html>

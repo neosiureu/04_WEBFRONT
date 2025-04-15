@@ -36,8 +36,8 @@ document.querySelector('#changeButton')
 
 
 
-document.addEventListener('keydown', function (e) {
-  
+const innerHTMLBox = document.querySelector('#changeButton');
 
-
-})
+innerHTMLBox.addEventListener("click", () => {
+  container.innerHTML += "<div class='box'><input type='text'></div>";
+});

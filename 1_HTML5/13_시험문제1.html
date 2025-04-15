@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>05_표연습문제</title>
+
+  <style>
+    thead {
+      background-color: rgb(255, 164, 66);
+      color: white;
+    }
+
+    tbody {
+      background-color: rgb(255, 251, 213)
+    }
+
+    tfoot {
+      background-color: rgb(255, 164, 66);
+      color: white;
+    }
+
+   .submmitButton{
+    margin-left: 150px;
+   }
+
+   .upload {
+    margin-left: 157px;
+   }
+
+   
+
+   .body{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+   }
+
+
+  
+   
+
+  
+
+  </style>
+</head>
+
+<body>
+
+
+
+
+
+  <form action="insert.no" method="post" style="border: solid black; max-width:900px; "   >
+    <fieldset id = filedSet>
+      <legend>공지사항 작성하기</legend>
+
+      <b> 제목 </b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input placeholder="제목을 입력하시오" name="title" size="48px"> <span class= "titles"></span> &nbsp;&nbsp; * name 속성값은 "title" 부여 필수 입력사항 속성 부여 <br><br>    
+
+      <div class="body">
+        <b>내용 </b> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <textarea rows="20" cols="50" placeholder="내용을 입력하시오" style="resize: none;"></textarea>
+
+      </textarea> &nbsp;&nbsp; * name 속성값은 "content" 부여 필수 입력사항 속성 부여 <br> </div>
+      <b>첨부파일 </b> <button name="uploadFile">파일선택</button> 선택된 파일 없음 <span class= "upload"> &nbsp;&nbsp;* name 속성값은 "uploadFile" 부여  필수 입력사항 속성 부여 </span>  <br><br>
+      <button class="submmitButton"> 작성하기 
+    </fieldset>
+  
+
+  </form> 
+
+
+  
+
+
+
+
+
+  <br>
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th>번호</th>
+        <th colspan="2" width="500px">제목</th>
+        <th>작성자</th>
+        <th>작성일</th>
+        <th>조회수</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>9</td>
+        <td width="450px">공지사항제목 9</td>
+        <td> <button> 바로가기</td>
+        <td width="100px">user01</td>
+        <td>2021-03-29</td>
+        <td>34</td>
+      </tr>
+
+      <tr>
+        <td>6</td>
+        <td width="450px">공지사항제목 6</td>
+        <td> <button> 바로가기</td>
+        <td width="100px">answ445</td>
+        <td>2021-03-12</td>
+        <td>67</td>
+      </tr>
+
+      <tr>
+        <td>1</td>
+        <td width="450px">공지사항제목 3</td>
+        <td width="68px"> <button type="button"> 바로가기</td>
+        <td width="100px">testg12</td>
+        <td>2021-03-01</td>
+        <td>98</td>
+      </tr>
+
+      <tr>
+        <td>3</td>
+        <td width="450px">공지사항제목 2</td>
+        <td> <button aria-rowspan="100px"> 바로가기</td>
+        <td width="100px">palwe3</td>
+        <td>2021-01-02</td>
+        <td>85</td>
+      </tr>
+
+      <tr>
+        <td>2</td>
+        <td width="450px">공지사항제목 1</td>
+        <td> <button> 바로가기</td>
+        <td width="100px">xml23</td>
+        <td>2020-12-24</td>
+        <td>124</td>
+      </tr>
+
+
+
+    <tfoot>
+      <tr>
+        <th colspan="4">전체공지사항 개수</th>
+        <th colspan="2">5개</th>
+      </tr>
+    </tfoot>
+  </table>
+
+  <hr>
+
+</body>
+
+</html>
