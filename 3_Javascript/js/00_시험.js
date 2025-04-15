@@ -1,19 +1,6 @@
-const boxList = document.querySelector(".box");
-const inputList =document.querySelector(".color-input")
-const textList =document.querySelector(".text-input")
-const text = document.querySelector(".text-origin")
-const height = document.querySelector(".height-input")
-const width = document.querySelector(".width-input")
-const justice = document.querySelector(".justice")
-const align = document.querySelector(".align")
+const box = document.querySelector(".box");
 
-const left = document.getElementsByName("left");
-const mid = document.getElementsByName("mid");
-const right = document.getElementsByName("right");
 
-const up = document.getElementsByName("up");
-const heightMid = document.getElementsByName("heightMid");
-const down = document.getElementsByName("down");
 
 
 
