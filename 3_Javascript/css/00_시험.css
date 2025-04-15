@@ -7,7 +7,7 @@
 main{
   width: 600px;
   margin: 50px auto;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .color-area{
@@ -20,7 +20,8 @@ main{
 }
 
 .container{
-  width: 18%;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -33,6 +34,36 @@ main{
   display: flex;
   justify-content: flex-end;
   align-items: end;
+}
+
+.width{
+  display: flex;
+ 
+}
+
+.height{
+  display: flex;
+ 
+}
+
+
+.fontSize{
+  display: flex;
+ 
+}
+
+.fontBord{
+  display: flex;
+ 
+}
+
+
+.textContainer{
+  display: flex;
+}
+
+.backgroundContainer{
+  display: flex;
 }
 
 .firstRow{
@@ -48,7 +79,9 @@ main{
 }
 
 .fourthRow{
-  width: 1000px;
+  justify-content: flex-start;
+  align-items: center;
+
   display: flex;
 }
 

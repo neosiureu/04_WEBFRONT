@@ -1,54 +1,33 @@
-// 적용하기 위한 버튼부터 얻어와야 함 => 클릭되는 이벤트를 탐지한다.
+const boxList = document.querySelector(".box");
+const inputList =document.querySelector(".color-input")
+const textList =document.querySelector(".text-input")
+const text = document.querySelector(".text-origin")
+const height = document.querySelector(".height-input")
+const width = document.querySelector(".width-input")
+const justice = document.querySelector(".justice")
+const align = document.querySelector(".align")
 
-const applyBtn = document.querySelector('#applyBtn');
+const left = document.getElementsByName("left");
+const mid = document.getElementsByName("mid");
+const right = document.getElementsByName("right");
 
-applyBtn.addEventListener("click", function() {
-  // input 요소들을 모두 얻어와라
-
-  const boxWidth = document.querySelector('#box-width');
-  const boxHeight = document.querySelector('#box-height');
-  
-  const fs = document.querySelector('#fs');
-
-  const fw = document.querySelector("[name = 'fw'] : checked");
-
-
-  const fontColor = document.querySelector('#box-font-color');
-  const bgColor = document.querySelector('#box-bg-color');
-
-  const row= document.querySelector("[name= 'align-row']:checked"); // 가로정렬
-  const col= document.querySelector("[name= 'align-col']:checked"); // 세로정렬
-
-  const content = document.querySelector("#content"); // 작성글
-
-  const box = document.querySelector("#box"); // 박스 자체
+const up = document.getElementsByName("up");
+const heightMid = document.getElementsByName("heightMid");
+const down = document.getElementsByName("down");
 
 
-  if(boxWidth.value.trim().length >0){
-  // input들에 작성된 값에 따라 #box인 것들에 style 추가
-  box.style.width= boxWidth.value + "px";
+
+document.querySelector('#changeButton')
+.addEventListener(
+"click",function(){
+    boxList.style.backgroundColor = inputList.value;
+    boxList.style.color = textList.value;
+    boxList.innerHTML = text.value;
+    boxList.style.height= height.value;
+    boxList.style.width= width.value;
 
 }
-
-if(boxWidth.value.trim().length >0){
-  box.style.width= boxWidth.value + "px";
-}
+)
 
 
 
-  box.style.fontSize = fs.value + "px";
-
-  box.style.fontWeight= fw.value; // = normal  = bold
-
-  box.style.color = fontColor.value;
-
-  box.style.backgroundColor = bgColor.value;
-
-  box.style.justifyContent = row.value;
-  box.style.alignItems  = col.value; 
-
-
-  box.innerText = content.value;
-  
-  
-});
